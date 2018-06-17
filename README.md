@@ -2,7 +2,7 @@
 This PCB will allow a 65(c)02 CPU to emulate a CSG/MOS 7501/8501 CPU.
 
 ## Theory
-The 6502 address, data, and r/w lines are fed through the CPLD so they cna be optionally tri-stated, and the on-board PIO port bits 0-6 are emulated.
+The 6502 address, data, and r/w lines are fed through the CPLD so they cna be optionally tri-stated, and the on-board PIO port lines 0-6 are emulated.
 
 ## License
 Copyright (C) 2018  Jim Brain, RETRO Innovations

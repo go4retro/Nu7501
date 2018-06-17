@@ -92,11 +92,11 @@ begin
       ddr_pio <= 0;
       data_pio <= 0;
    end
-   else if(r_w_6502 & ce_0000)
+   else if(!r_w_6502 & ce_0000)
    begin
       data_pio <= {data_6502[7:6],data_6502[4:0]};
    end
-   else if(r_w_6502 & ce_0001)
+   else if(!r_w_6502 & ce_0001)
    begin
       ddr_pio <= {data_6502[7:6],data_6502[4:0]};
    end

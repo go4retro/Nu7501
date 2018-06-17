@@ -58,22 +58,22 @@ assign pio[0] =            (ddr_pio[0] ? data_pio[0] : 'bz);
 
 always @(*)
 begin
-   if(!ce_pio & clock & !r_w_6502) // write cycle
+   if(aec & !ce_pio & clock & !r_w_6502) // write cycle
    begin
       data_7501_out = data_6502;
       data_6502_out = 8'bz;
    end
-   else if (ce_pio & clock & !r_w_6502) // emulate no data on PIO write
+   else if (aec & ce_pio & clock & !r_w_6502) // emulate no data on PIO write
    begin
       data_7501_out = 8'bz;
       data_6502_out = 8'bz;
    end
-   else if (ce_0000 & clock & r_w_6502) // read PIO
+   else if (aec & ce_0000 & clock & r_w_6502) // read PIO
    begin
       data_7501_out = 8'bz;
       data_6502_out = {pio[6:5],'b0,pio[4:0]};
    end
-   else if (ce_0001 & clock & r_w_6502) // read ddr
+   else if (aec & ce_0001 & clock & r_w_6502) // read ddr
    begin
       data_7501_out = 8'bz;
       data_6502_out = {ddr_pio[6:5],'b0,ddr_pio[4:0]};

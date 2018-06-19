@@ -18,17 +18,23 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
+//`define LATCH
+
 module Fake7501(input _reset,
                 input clock,
                 input r_w_6502,
+`ifdef LATCH                
                 output r_w_7501,
+`else                
+                output reg r_w_7501,
+`endif                
                 input [15:0]address_6502,
                 output [15:0]address_7501,
                 inout [7:0]data_6502,
                 inout [7:0]data_7501,
                 input aec,
-                output _rdy_6502,
-                input _rdy_7501,
+                input gate_in,
                 inout [6:0]pio
                );
 wire ce_pio;
@@ -38,6 +44,7 @@ reg [6:0]data_pio;
 reg [6:0]ddr_pio;
 reg [7:0]data_6502_out;
 reg [7:0]data_7501_out;
+reg r_w_latched;
 
 assign ce_pio =            (address_6502[15:1] == 0);
 assign ce_0000 =           ce_pio & !address_6502[0];
@@ -46,8 +53,6 @@ assign ce_0001 =           ce_pio & address_6502[0];
 assign address_7501 =      (aec ? address_6502 : 16'bz);
 assign data_6502 =         data_6502_out;
 assign data_7501 =         data_7501_out;
-assign r_w_7501 =          (aec ? r_w_6502 : 'bz);
-assign _rdy_6502 =         _rdy_7501;
 assign pio[6] =            (ddr_pio[6] ? data_pio[6] : 'bz);
 assign pio[5] =            (ddr_pio[5] ? data_pio[5] : 'bz);
 assign pio[4] =            (ddr_pio[4] ? data_pio[4] : 'bz);
@@ -101,5 +106,33 @@ begin
       ddr_pio <= {data_6502[7:6],data_6502[4:0]};
    end
 end
+
+`ifdef LATCH
+assign r_w_7501 =          (aec ? r_w_latched : 'bz);
+
+always @(gate_in, r_w_6502)
+begin
+   if(gate_in)
+      r_w_latched = r_w_6502;
+end
+
+`else
+
+always @(negedge gate_in)
+begin
+    r_w_latched <= r_w_6502;
+end
+
+always @(*)
+begin
+   if(aec & gate_in)
+      r_w_7501 = r_w_6502;
+   else if (aec & !gate_in)
+      r_w_7501 = r_w_latched;
+   else
+      r_w_7501 = 'bz;
+end
+
+`endif
 
 endmodule

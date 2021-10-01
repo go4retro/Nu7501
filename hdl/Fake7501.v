@@ -27,7 +27,7 @@ module Fake7501(input _reset,
 `ifdef LATCH                
                 output r_w_7501,
 `else                
-                output reg r_w_7501,
+                output r_w_7501,
 `endif                
                 input [15:0]address_6502,
                 output [15:0]address_7501,
@@ -61,6 +61,29 @@ assign pio[2] =            (ddr_pio[2] ? data_pio[2] : 'bz);
 assign pio[1] =            (ddr_pio[1] ? data_pio[1] : 'bz);
 assign pio[0] =            (ddr_pio[0] ? data_pio[0] : 'bz);
 
+assign r_w_7501 = (aec ? r_w_6502 : 'bz);
+
+always @(*)
+begin
+   if(aec & !r_w_6502) // write cycle
+   begin
+      data_7501_out = data_6502;
+      data_6502_out = 8'bz;
+   end
+	else if (aec & r_w_6502) // read cycle
+   begin
+      data_7501_out = 8'bz;
+      data_6502_out = data_7501;
+   end
+	else
+	begin
+		//aec active
+		data_7501_out = 8'bz;
+		data_6502_out = 8'bz;
+	end
+end
+
+/*
 always @(*)
 begin
    if(aec & !ce_pio & clock & !r_w_6502) // write cycle
@@ -106,7 +129,7 @@ begin
       ddr_pio <= {data_6502[7:6],data_6502[4:0]};
    end
 end
-
+/*
 `ifdef LATCH
 assign r_w_7501 =          (aec ? r_w_latched : 'bz);
 
@@ -134,5 +157,5 @@ begin
 end
 
 `endif
-
+*/
 endmodule

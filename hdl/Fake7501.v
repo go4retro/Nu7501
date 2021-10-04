@@ -37,18 +37,15 @@ module Fake7501(input _reset,
                 input gate_in,
                 inout [6:0]pio
                );
-wire ce_pio;
-wire ce_0000;
-wire ce_0001;
 reg [6:0]data_pio;
 reg [6:0]ddr_pio;
 reg [7:0]data_6502_out;
 reg [7:0]data_7501_out;
 reg r_w_latched;
 
-assign ce_pio =            (address_6502[15:1] == 0);
-assign ce_0000 =           ce_pio & !address_6502[0];
-assign ce_0001 =           ce_pio & address_6502[0];
+wire ce_pio =            ~|address_6502[15:1];
+wire ce_0000 =           ce_pio & !address_6502[0];
+wire ce_0001 =           ce_pio & address_6502[0];
 
 assign address_7501 =      (aec ? address_6502 : 16'bz);
 assign data_6502 =         data_6502_out;
@@ -61,14 +58,29 @@ assign pio[2] =            (ddr_pio[2] ? data_pio[2] : 'bz);
 assign pio[1] =            (ddr_pio[1] ? data_pio[1] : 'bz);
 assign pio[0] =            (ddr_pio[0] ? data_pio[0] : 'bz);
 
-assign r_w_7501 = (aec ? r_w_6502 : 'bz);
+assign r_w_7501 = (aec ? (ce_pio ? 'bz : r_w_6502) : 'bz);
 
 always @(*)
 begin
-   if(aec & !r_w_6502) // write cycle
+   if(aec & !ce_pio &!r_w_6502) // write cycle
    begin
       data_7501_out = data_6502;
       data_6502_out = 8'bz;
+   end
+	else if(aec & ce_pio &!r_w_6502) // write cycle to PIO
+   begin
+      data_7501_out = 8'bz;	//Do not write to peripherials
+      data_6502_out = 8'bz;
+   end
+	else if (aec & ce_0000 & r_w_6502) // read PIO DDR
+   begin
+      data_7501_out = 8'bz;
+      data_6502_out = {ddr_pio[6:5], 1'b0, ddr_pio[4:0]};
+   end
+   else if (aec & ce_0001 & r_w_6502) // read PIO value
+   begin
+      data_7501_out = 8'bz;
+      data_6502_out = {pio[6:5], 1'b0, pio[4:0]};
    end
 	else if (aec & r_w_6502) // read cycle
    begin
@@ -81,6 +93,25 @@ begin
 		data_7501_out = 8'bz;
 		data_6502_out = 8'bz;
 	end
+end
+
+always @(negedge clock, negedge _reset)
+begin
+   if(!_reset)
+   begin
+      ddr_pio <= 0;
+      data_pio <= 0;
+   end
+   else if(!r_w_6502 & ce_0000)
+   begin
+		//Write PIO direction
+      ddr_pio <= {data_6502[7:6],data_6502[4:0]};
+   end
+   else if(!r_w_6502 & ce_0001)
+   begin
+		//Write data to PIO
+      data_pio <= {data_6502[7:6],data_6502[4:0]};
+   end
 end
 
 /*

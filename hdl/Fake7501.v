@@ -58,7 +58,14 @@ assign pio[2] =            (ddr_pio[2] ? data_pio[2] : 'bz);
 assign pio[1] =            (ddr_pio[1] ? data_pio[1] : 'bz);
 assign pio[0] =            (ddr_pio[0] ? data_pio[0] : 'bz);
 
-assign r_w_7501 = (aec ? (ce_pio ? 'bz : r_w_6502) : 'bz);
+assign r_w_7501 = (aec ? (ce_pio ? 'bz : r_w_latched) : 'bz);
+
+//Latch r/w to not update it while gate_in
+always @(gate_in, r_w_6502)
+begin
+   if(gate_in)
+      r_w_latched = r_w_6502;
+end
 
 always @(*)
 begin
@@ -95,6 +102,7 @@ begin
 	end
 end
 
+//PIO write 
 always @(negedge clock, negedge _reset)
 begin
    if(!_reset)

@@ -67,25 +67,24 @@ r_w_7501 S:PIN97
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 ddr_pio<4> data_pio<0> ddr_pio<2> address_6502_3_IBUF$BUF0
+PARTITION FB1_1 data_6502<7>_BUFR.MC data_pio<0> $OpTx$DEC_data_6502<7>_BUFR address_6502_3_IBUF$BUF0
 		 _6_ address_6502_5_IBUF$BUF0 address_6502_1_IBUF$BUF0 address_6502_4_IBUF$BUF0
-		 ddr_pio<1> ddr_pio<0> address_6502_2_IBUF$BUF0 EXP13_
-		 data_6502<1>_BUFR.MC EXP14_ EXP15_ data_6502<0>_BUFR.MC
-		 EXP16_ address_6502_8_IBUF$BUF0
+		 EXP13_ $OpTx$DEC_data_6502<7>_BUFR address_6502_2_IBUF$BUF0 EXP14_
+		 EXP15_ data_6502<1>_BUFR.MC ddr_pio<0> EXP16_
+		 data_6502<0>_BUFR.MC address_6502_8_IBUF$BUF0
 PARTITION FB2_1 _7_ data_7501_2_IOBUFE$BUF0 data_pio<2> data_pio<1>
-		 data_7501_1_IOBUFE$BUF0 data_7501_0_IOBUFE$BUF0 data_7501_4_IOBUFE$BUF0 r_w_latched
-		 $OpTx$BIN_STEP$29 data_7501_3_IOBUFE$BUF0 ddr_pio<3> data_7501_5_IOBUFE$BUF0
+		 data_7501_1_IOBUFE$BUF0 data_7501_0_IOBUFE$BUF0 data_7501_4_IOBUFE$BUF0 r_w_6502_IBUF$BUF0
+		 ddr_pio<6> data_7501_3_IOBUFE$BUF0 ddr_pio<4> data_7501_5_IOBUFE$BUF0
 		 _11_ data_7501_6_IOBUFE$BUF0 data_7501_7_IOBUFE$BUF0 _10_
 		 _9_ _8_
-PARTITION FB3_1 data_6502<2>_BUFR.MC address_6502_0_IBUF$BUF0 data_6502<7>_BUFR.MC address_6502_10_IBUF$BUF0
-		 address_6502_6_IBUF$BUF0 address_6502_11_IBUF$BUF0 $OpTx$DEC_data_6502<7>_BUFR address_6502_7_IBUF$BUF0
-		 address_6502_9_IBUF$BUF0 $OpTx$DEC_data_6502<7>_BUFR EXP17_ data_6502<6>_BUFR.MC
-		 EXP18_ address_6502_12_IBUF$BUF0 EXP19_ $OpTx$DEC_data_6502<7>_BUFR
-		 address_6502_13_IBUF$BUF0 EXP20_
-PARTITION FB4_1 ddr_pio<6> ddr_pio<5> address_6502_14_IBUF$BUF0 EXP21_
-		 data_6502<3>_BUFR.MC $OpTx$DEC_data_6502<7>_BUFR $OpTx$DEC_data_6502<2>_BUFR EXP22_
-		 data_6502<4>_BUFR.MC EXP23_ address_6502_15_IBUF$BUF0 data_pio<5>
-		 _12_
-PARTITION FB4_15 data_pio<3> data_pio<4> data_6502_5_IOBUFE data_pio<6>
-		
+PARTITION FB3_1 ddr_pio<3> address_6502_0_IBUF$BUF0 ddr_pio<2> address_6502_10_IBUF$BUF0
+		 address_6502_6_IBUF$BUF0 address_6502_11_IBUF$BUF0
+PARTITION FB3_8 address_6502_7_IBUF$BUF0 address_6502_9_IBUF$BUF0 EXP17_ data_6502<4>_BUFR.MC
+		 EXP18_ EXP19_ address_6502_12_IBUF$BUF0 EXP20_
+		 data_6502<2>_BUFR.MC address_6502_13_IBUF$BUF0 EXP21_
+PARTITION FB4_1 r_w_latched ddr_pio<5> address_6502_14_IBUF$BUF0 ddr_pio<1>
+		 EXP22_ data_6502<6>_BUFR.MC EXP23_ EXP24_
+		 data_6502<3>_BUFR.MC EXP25_ address_6502_15_IBUF$BUF0 data_pio<5>
+		 _12_ $OpTx$DEC_data_6502<7>_BUFR data_pio<3> data_pio<4>
+		 data_6502_5_IOBUFE data_pio<6>
 

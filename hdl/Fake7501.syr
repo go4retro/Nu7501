@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Fake7501.prj
 
@@ -91,8 +91,6 @@ Analyzing hierarchy for module <Fake7501> in library <work>.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <Fake7501>.
-WARNING:Xst:905 - "Fake7501.v" line 62: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <gate_in>
 Module <Fake7501> is correct for synthesis.
  
 
@@ -104,7 +102,6 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <Fake7501>.
     Related source file is "Fake7501.v".
-WARNING:Xst:737 - Found 1-bit latch for signal <r_w_latched>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Found 16-bit tristate buffer for signal <address_7501>.
     Found 7-bit tristate buffer for signal <pio>.
     Found 1-bit tristate buffer for signal <r_w_7501>.
@@ -112,6 +109,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <r_w_latched>. Latches may be gen
     Found 8-bit tristate buffer for signal <data_7501_out>.
     Found 7-bit register for signal <data_pio>.
     Found 7-bit register for signal <ddr_pio>.
+    Found 1-bit register for signal <r_w_latched>.
     Summary:
 	inferred  40 Tristate(s).
 Unit <Fake7501> synthesized.
@@ -121,10 +119,9 @@ Unit <Fake7501> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 2
+# Registers                                            : 3
+ 1-bit register                                        : 1
  7-bit register                                        : 2
-# Latches                                              : 1
- 1-bit latch                                           : 1
 # Tristates                                            : 11
  1-bit tristate buffer                                 : 8
  16-bit tristate buffer                                : 1
@@ -140,10 +137,7 @@ Macro Statistics
 =========================================================================
 Advanced HDL Synthesis Report
 
-Macro Statistics
-# Latches                                              : 1
- 1-bit latch                                           : 1
-
+Found no macro
 =========================================================================
 
 =========================================================================
@@ -182,17 +176,16 @@ Design Statistics
 # IOs                              : 61
 
 Cell Usage :
-# BELS                             : 96
+# BELS                             : 95
 #      AND2                        : 36
 #      AND3                        : 3
-#      AND4                        : 1
 #      AND7                        : 1
 #      AND8                        : 1
 #      INV                         : 40
 #      OR2                         : 14
 # FlipFlops/Latches                : 15
+#      FD                          : 1
 #      FDCE                        : 14
-#      LD                          : 1
 # IO Buffers                       : 61
 #      IBUF                        : 21
 #      IOBUFE                      : 23
@@ -200,14 +193,14 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.37 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.27 secs
  
 --> 
 
-Total memory usage is 4497064 kilobytes
+Total memory usage is 4497004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -1,0 +1,129 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+10-28-2021  3:05PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  Fake7501.ngd
+output file: Fake7501.pad
+Part type:   xc9572xl
+Speed grade: -10
+Package:     tq100
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|data_7501<3>|I/O|I/O|BIDIR|||||||||
+P2|TIE||.||||||||||
+P3|data_7501<4>|I/O|I/O/GTS1|BIDIR|||||||||
+P4|r_w_6502|I|I/O/GTS2|INPUT|||||||||
+P5|VCC||VCCINT||||||||||
+P6|data_7501<5>|I/O|I/O|BIDIR|||||||||
+P7|TIE||.||||||||||
+P8|data_6502<0>|I/O|I/O|BIDIR|||||||||
+P9|data_7501<6>|I/O|I/O|BIDIR|||||||||
+P10|data_6502<1>|I/O|I/O|BIDIR|||||||||
+P11|data_7501<7>|I/O|I/O|BIDIR|||||||||
+P12|data_6502<2>|I/O|I/O|BIDIR|||||||||
+P13|pio<0>|I/O|I/O|BIDIR|||||||||
+P14|data_6502<3>|I/O|I/O|BIDIR|||||||||
+P15|address_7501<5>|O|I/O|OUTPUT|||||||||
+P16|address_6502<2>|I|I/O|INPUT|||||||||
+P17|address_7501<4>|O|I/O|OUTPUT|||||||||
+P18|address_6502<1>|I|I/O|INPUT|||||||||
+P19|TIE||.||||||||||
+P20|address_7501<3>|O|I/O|OUTPUT|||||||||
+P21|GND||GND||||||||||
+P22|address_6502<0>|I|I/O/GCK1|INPUT|||||||||
+P23|address_7501<2>|O|I/O/GCK2|OUTPUT|||||||||
+P24|TIE||.||||||||||
+P25|address_7501<1>|O|I/O|OUTPUT|||||||||
+P26|VCC||VCCIO||||||||||
+P27|clock|GCK|I/O/GCK3||||||||||
+P28|TIE||I/O||||||||||
+P29|TIE||I/O||||||||||
+P30|aec|I|I/O|INPUT|||||||||
+P31|GND||GND||||||||||
+P32|address_7501<0>|O|I/O|OUTPUT|||||||||
+P33|address_6502<3>|I|I/O|INPUT|||||||||
+P34|TIE||.||||||||||
+P35|address_7501<6>|O|I/O|OUTPUT|||||||||
+P36|address_6502<4>|I|I/O|INPUT|||||||||
+P37|address_7501<7>|O|I/O|OUTPUT|||||||||
+P38|VCC||VCCIO||||||||||
+P39|address_6502<5>|I|I/O|INPUT|||||||||
+P40|address_7501<8>|O|I/O|OUTPUT|||||||||
+P41|address_6502<6>|I|I/O|INPUT|||||||||
+P42|address_7501<9>|O|I/O|OUTPUT|||||||||
+P43|TIE||.||||||||||
+P44|GND||GND||||||||||
+P45|TDI||TDI||||||||||
+P46|TIE||.||||||||||
+P47|TMS||TMS||||||||||
+P48|TCK||TCK||||||||||
+P49|address_6502<7>|I|I/O|INPUT|||||||||
+P50|address_7501<10>|O|I/O|OUTPUT|||||||||
+P51|VCC||VCCIO||||||||||
+P52|address_6502<8>|I|I/O|INPUT|||||||||
+P53|address_7501<11>|O|I/O|OUTPUT|||||||||
+P54|address_6502<9>|I|I/O|INPUT|||||||||
+P55|address_7501<12>|O|I/O|OUTPUT|||||||||
+P56|address_6502<10>|I|I/O|INPUT|||||||||
+P57|VCC||VCCINT||||||||||
+P58|address_7501<13>|O|I/O|OUTPUT|||||||||
+P59|address_6502<11>|I|I/O|INPUT|||||||||
+P60|TIE||I/O||||||||||
+P61|TIE||I/O||||||||||
+P62|GND||GND||||||||||
+P63|TIE||I/O||||||||||
+P64|TIE||I/O||||||||||
+P65|TIE||I/O||||||||||
+P66|TIE||I/O||||||||||
+P67|TIE||I/O||||||||||
+P68|TIE||I/O||||||||||
+P69|GND||GND||||||||||
+P70|TIE||I/O||||||||||
+P71|address_7501<14>|O|I/O|OUTPUT|||||||||
+P72|address_6502<12>|I|I/O|INPUT|||||||||
+P73|TIE||.||||||||||
+P74|address_7501<15>|O|I/O|OUTPUT|||||||||
+P75|GND||GND||||||||||
+P76|address_6502<13>|I|I/O|INPUT|||||||||
+P77|gate_in|I|I/O|INPUT|||||||||
+P78|address_6502<14>|I|I/O|INPUT|||||||||
+P79|pio<6>|I/O|I/O|BIDIR|||||||||
+P80|TIE||.||||||||||
+P81|address_6502<15>|I|I/O|INPUT|||||||||
+P82|pio<5>|I/O|I/O|BIDIR|||||||||
+P83|TDO||TDO||||||||||
+P84|GND||GND||||||||||
+P85|data_6502<7>|I/O|I/O|BIDIR|||||||||
+P86|pio<4>|I/O|I/O|BIDIR|||||||||
+P87|data_6502<6>|I/O|I/O|BIDIR|||||||||
+P88|VCC||VCCIO||||||||||
+P89|pio<3>|I/O|I/O|BIDIR|||||||||
+P90|data_6502<5>|I/O|I/O|BIDIR|||||||||
+P91|pio<2>|I/O|I/O|BIDIR|||||||||
+P92|data_6502<4>|I/O|I/O|BIDIR|||||||||
+P93|pio<1>|I/O|I/O|BIDIR|||||||||
+P94|data_7501<2>|I/O|I/O|BIDIR|||||||||
+P95|data_7501<1>|I/O|I/O|BIDIR|||||||||
+P96|data_7501<0>|I/O|I/O|BIDIR|||||||||
+P97|r_w_7501|O|I/O|OUTPUT|||||||||
+P98|VCC||VCCINT||||||||||
+P99|_reset|GSR|I/O/GSR||||||||||
+P100|GND||GND||||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: Fake7501                            Date: 10-28-2021,  5:56PM
+Design Name: Fake7501                            Date: 12-21-2021,  4:22PM
 Device Used: XC9572XL-10-TQ100
 Fitting Status: Successful
 
@@ -116,7 +116,7 @@ pio<1>                            3     19    FB2_4   93   I/O     I/O     STD  
 data_7501<1>                      2     3     FB2_5   95   I/O     I/O     STD  FAST 
 data_7501<0>                      2     3     FB2_6   96   I/O     I/O     STD  FAST 
 data_7501<4>                      2     3     FB2_7   3    GTS/I/O I/O     STD  FAST 
-r_w_7501                          2     3     FB2_8   97   I/O     O       STD  FAST 
+r_w_7501                          2     2     FB2_8   97   I/O     O       STD  FAST 
 data_7501<3>                      2     3     FB2_10  1    I/O     I/O     STD  FAST 
 data_7501<5>                      2     3     FB2_12  6    I/O     I/O     STD  FAST 
 data_6502<0>                      2     3     FB2_13  8    I/O     I/O     STD  FAST 
@@ -246,17 +246,17 @@ Signals Used by Logic in Function Block
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-data_6502<7>_BUFR    .X...X..............X........X.......... 4
+data_6502<7>_BUFR    .X...X.....X.................X.......... 4
 pio<0>               ........XXXXXXXXXXXXXXXX..XX.X.......... 19
 $OpTx$DEC_data_6502<7>_BUFR_MC$2 
-                     ..X..X............XX.................... 4
+                     ..X..X......XX.......................... 4
 address_7501<3>      .................X......X............... 2
 data_6502<3>         ........................XX...X.......... 3
 address_7501<5>      ...................X....X............... 2
 address_7501<1>      ...............X........X............... 2
 address_7501<4>      ..................X.....X............... 2
 $OpTx$DEC_data_6502<7>_BUFR_MC$3 
-                     X....X...XXXXXXXXX...XXX................ 14
+                     X....X...XX...XXXXXXXXXX................ 14
 address_7501<2>      ................X.......X............... 2
 data_6502<1>_BUFR    ...X..X.XXXXXXXXXXXXXXXX....XX.......... 20
 ddr_pio<0>           ........XXXXXXXXXXXXXXXX..X..X.......... 18
@@ -311,7 +311,7 @@ pio<1>               XXXXXXXXXXXXXXXX.......X......X.X....... 19
 data_7501<1>         ................X......X........X....... 3
 data_7501<0>         ................X.....X.........X....... 3
 data_7501<4>         ................X.........X.....X....... 3
-r_w_7501             ................X...............XX...... 3
+r_w_7501             ................................XX...... 2
 ddr_pio<6>           XXXXXXXXXXXXXXXX.............X..X....... 18
 data_7501<3>         ................X........X......X....... 3
 ddr_pio<4>           XXXXXXXXXXXXXXXX..........X.....X....... 18
@@ -439,34 +439,34 @@ pio<6>               ......XXXXXXXXXXXXXXXX......X...X.X..... 19
 
 
 $OpTx$DEC_data_6502(7)_BUFR_MC$2 <= (($OpTx$DEC_data_6502(7)_BUFR_MC$3)
-	OR (address_6502(5) AND data_7501(7).PIN)
-	OR (address_6502(4) AND data_7501(7).PIN));
+	OR (address_6502(14) AND data_7501(7).PIN)
+	OR (address_6502(13) AND data_7501(7).PIN));
 
 
 $OpTx$DEC_data_6502(7)_BUFR_MC$3 <= (($OpTx$DEC_data_6502(7)_BUFR_MC$1)
 	OR (address_6502_4_IBUF$BUF0.EXP)
+	OR (address_6502(2) AND data_7501(7).PIN)
+	OR (address_6502(1) AND data_7501(7).PIN)
 	OR (address_6502(9) AND data_7501(7).PIN)
 	OR (address_6502(8) AND data_7501(7).PIN)
+	OR (address_6502(3) AND data_7501(7).PIN)
 	OR (address_6502(7) AND data_7501(7).PIN)
-	OR (address_6502(14) AND data_7501(7).PIN)
-	OR (address_6502(13) AND data_7501(7).PIN)
-	OR (address_6502(12) AND data_7501(7).PIN)
-	OR (address_6502(11) AND data_7501(7).PIN)
-	OR (address_6502(10) AND data_7501(7).PIN));
+	OR (address_6502(4) AND data_7501(7).PIN)
+	OR (address_6502(15) AND data_7501(7).PIN));
 
 
-$OpTx$DEC_data_6502(7)_BUFR_MC$1 <= ((NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND ddr_pio(6) AND r_w_6502 AND NOT address_6502(0))
-	OR (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND r_w_6502 AND address_6502(0) AND pio(6).PIN));
+$OpTx$DEC_data_6502(7)_BUFR_MC$1 <= ((ddr_pio(6) AND r_w_6502 AND NOT address_6502(0) AND 
+	NOT address_6502(14) AND NOT address_6502(13) AND NOT address_6502(12) AND 
+	NOT address_6502(2) AND NOT address_6502(1) AND NOT address_6502(11) AND 
+	NOT address_6502(9) AND NOT address_6502(8) AND NOT address_6502(3) AND 
+	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(10) AND 
+	NOT address_6502(7) AND NOT address_6502(4) AND NOT address_6502(15))
+	OR (r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15) AND pio(6).PIN));
 
 
 
@@ -581,32 +581,20 @@ data_6502_OE(0) <= (r_w_6502 AND aec);
 
 
 data_6502(0)_BUFR <= ((ddr_pio(0).EXP)
+	OR (address_6502(2) AND data_7501(0).PIN)
+	OR (address_6502(1) AND data_7501(0).PIN)
+	OR (address_6502(11) AND data_7501(0).PIN)
+	OR (address_6502(3) AND data_7501(0).PIN)
+	OR (address_6502(6) AND data_7501(0).PIN)
+	OR (address_6502(14) AND data_7501(0).PIN)
+	OR (address_6502(13) AND data_7501(0).PIN)
+	OR (address_6502(5) AND data_7501(0).PIN)
+	OR (address_6502(10) AND data_7501(0).PIN)
 	OR (address_6502(9) AND data_7501(0).PIN)
 	OR (address_6502(8) AND data_7501(0).PIN)
 	OR (address_6502(7) AND data_7501(0).PIN)
-	OR (address_6502(1) AND data_7501(0).PIN)
-	OR (address_6502(15) AND data_7501(0).PIN)
-	OR (address_6502(5) AND data_7501(0).PIN)
 	OR (address_6502(4) AND data_7501(0).PIN)
-	OR (address_6502(3) AND data_7501(0).PIN)
-	OR (address_6502(2) AND data_7501(0).PIN)
-	OR (address_6502(14) AND data_7501(0).PIN)
-	OR (address_6502(13) AND data_7501(0).PIN)
-	OR (address_6502(12) AND data_7501(0).PIN)
-	OR (address_6502(11) AND data_7501(0).PIN)
-	OR (address_6502(10) AND data_7501(0).PIN));
-
-
-data_6502(1)_BUFR <= ((EXP14_.EXP)
-	OR (address_6502(9) AND data_7501(1).PIN)
-	OR (address_6502(8) AND data_7501(1).PIN)
-	OR (address_6502(7) AND data_7501(1).PIN)
-	OR (address_6502(14) AND data_7501(1).PIN)
-	OR (address_6502(15) AND data_7501(1).PIN)
-	OR (address_6502(13) AND data_7501(1).PIN)
-	OR (address_6502(12) AND data_7501(1).PIN)
-	OR (address_6502(11) AND data_7501(1).PIN)
-	OR (address_6502(10) AND data_7501(1).PIN));
+	OR (address_6502(15) AND data_7501(0).PIN));
 
 
 data_6502_I(1) <= data_6502(1)_BUFR;
@@ -614,21 +602,33 @@ data_6502(1) <= data_6502_I(1) when data_6502_OE(1) = '1' else 'Z';
 data_6502_OE(1) <= (r_w_6502 AND aec);
 
 
+data_6502(1)_BUFR <= ((EXP14_.EXP)
+	OR (address_6502(2) AND data_7501(1).PIN)
+	OR (address_6502(1) AND data_7501(1).PIN)
+	OR (address_6502(11) AND data_7501(1).PIN)
+	OR (address_6502(8) AND data_7501(1).PIN)
+	OR (address_6502(3) AND data_7501(1).PIN)
+	OR (address_6502(9) AND data_7501(1).PIN)
+	OR (address_6502(7) AND data_7501(1).PIN)
+	OR (address_6502(4) AND data_7501(1).PIN)
+	OR (address_6502(15) AND data_7501(1).PIN));
+
+
 data_6502(2)_BUFR <= ((address_6502_12_IBUF$BUF0.EXP)
+	OR (address_6502(2) AND data_7501(2).PIN)
+	OR (address_6502(1) AND data_7501(2).PIN)
+	OR (address_6502(11) AND data_7501(2).PIN)
+	OR (address_6502(3) AND data_7501(2).PIN)
+	OR (address_6502(6) AND data_7501(2).PIN)
+	OR (address_6502(14) AND data_7501(2).PIN)
+	OR (address_6502(13) AND data_7501(2).PIN)
+	OR (address_6502(5) AND data_7501(2).PIN)
+	OR (address_6502(10) AND data_7501(2).PIN)
 	OR (address_6502(9) AND data_7501(2).PIN)
 	OR (address_6502(8) AND data_7501(2).PIN)
 	OR (address_6502(7) AND data_7501(2).PIN)
-	OR (address_6502(1) AND data_7501(2).PIN)
-	OR (address_6502(15) AND data_7501(2).PIN)
-	OR (address_6502(5) AND data_7501(2).PIN)
 	OR (address_6502(4) AND data_7501(2).PIN)
-	OR (address_6502(3) AND data_7501(2).PIN)
-	OR (address_6502(2) AND data_7501(2).PIN)
-	OR (address_6502(14) AND data_7501(2).PIN)
-	OR (address_6502(13) AND data_7501(2).PIN)
-	OR (address_6502(12) AND data_7501(2).PIN)
-	OR (address_6502(11) AND data_7501(2).PIN)
-	OR (address_6502(10) AND data_7501(2).PIN));
+	OR (address_6502(15) AND data_7501(2).PIN));
 
 
 data_6502_I(2) <= data_6502(2)_BUFR;
@@ -636,27 +636,27 @@ data_6502(2) <= data_6502_I(2) when data_6502_OE(2) = '1' else 'Z';
 data_6502_OE(2) <= (r_w_6502 AND aec);
 
 
-data_6502(3)_BUFR <= ((address_6502(9) AND data_7501(3).PIN)
-	OR (address_6502(8) AND data_7501(3).PIN)
-	OR (address_6502(7) AND data_7501(3).PIN)
-	OR (address_6502(1) AND data_7501(3).PIN)
-	OR (address_6502(15) AND data_7501(3).PIN)
-	OR (address_6502_15_IBUF$BUF0.EXP)
-	OR (address_6502(6) AND data_7501(3).PIN)
-	OR (address_6502(5) AND data_7501(3).PIN)
-	OR (address_6502(4) AND data_7501(3).PIN)
-	OR (address_6502(3) AND data_7501(3).PIN)
-	OR (address_6502(2) AND data_7501(3).PIN)
-	OR (address_6502(14) AND data_7501(3).PIN)
-	OR (address_6502(13) AND data_7501(3).PIN)
-	OR (address_6502(12) AND data_7501(3).PIN)
-	OR (address_6502(11) AND data_7501(3).PIN)
-	OR (address_6502(10) AND data_7501(3).PIN));
-
-
 data_6502_I(3) <= data_6502(3)_BUFR;
 data_6502(3) <= data_6502_I(3) when data_6502_OE(3) = '1' else 'Z';
 data_6502_OE(3) <= (r_w_6502 AND aec);
+
+
+data_6502(3)_BUFR <= ((address_6502(2) AND data_7501(3).PIN)
+	OR (address_6502(1) AND data_7501(3).PIN)
+	OR (address_6502(11) AND data_7501(3).PIN)
+	OR (address_6502(3) AND data_7501(3).PIN)
+	OR (address_6502(6) AND data_7501(3).PIN)
+	OR (address_6502_15_IBUF$BUF0.EXP)
+	OR (address_6502(14) AND data_7501(3).PIN)
+	OR (address_6502(13) AND data_7501(3).PIN)
+	OR (address_6502(12) AND data_7501(3).PIN)
+	OR (address_6502(5) AND data_7501(3).PIN)
+	OR (address_6502(10) AND data_7501(3).PIN)
+	OR (address_6502(9) AND data_7501(3).PIN)
+	OR (address_6502(8) AND data_7501(3).PIN)
+	OR (address_6502(7) AND data_7501(3).PIN)
+	OR (address_6502(4) AND data_7501(3).PIN)
+	OR (address_6502(15) AND data_7501(3).PIN));
 
 
 data_6502_I(4) <= data_6502(4)_BUFR;
@@ -665,50 +665,50 @@ data_6502_OE(4) <= (r_w_6502 AND aec);
 
 
 data_6502(4)_BUFR <= ((address_6502_9_IBUF$BUF0.EXP)
-	OR (address_6502(9) AND data_7501(4).PIN)
-	OR (address_6502(8) AND data_7501(4).PIN)
-	OR (address_6502(7) AND data_7501(4).PIN)
-	OR (address_6502(1) AND data_7501(4).PIN)
-	OR (address_6502(15) AND data_7501(4).PIN)
-	OR (address_6502(6) AND data_7501(4).PIN)
-	OR (address_6502(5) AND data_7501(4).PIN)
-	OR (address_6502(4) AND data_7501(4).PIN)
-	OR (address_6502(3) AND data_7501(4).PIN)
 	OR (address_6502(2) AND data_7501(4).PIN)
+	OR (address_6502(1) AND data_7501(4).PIN)
+	OR (address_6502(11) AND data_7501(4).PIN)
+	OR (address_6502(3) AND data_7501(4).PIN)
+	OR (address_6502(6) AND data_7501(4).PIN)
 	OR (address_6502(14) AND data_7501(4).PIN)
 	OR (address_6502(13) AND data_7501(4).PIN)
 	OR (address_6502(12) AND data_7501(4).PIN)
-	OR (address_6502(11) AND data_7501(4).PIN)
-	OR (address_6502(10) AND data_7501(4).PIN));
+	OR (address_6502(5) AND data_7501(4).PIN)
+	OR (address_6502(10) AND data_7501(4).PIN)
+	OR (address_6502(9) AND data_7501(4).PIN)
+	OR (address_6502(8) AND data_7501(4).PIN)
+	OR (address_6502(7) AND data_7501(4).PIN)
+	OR (address_6502(4) AND data_7501(4).PIN)
+	OR (address_6502(15) AND data_7501(4).PIN));
 
 
 data_6502_I(5) <= NOT (((NOT data_7501(5).PIN)
-	OR (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND r_w_6502)));
+	OR (r_w_6502 AND NOT address_6502(14) AND NOT address_6502(13) AND 
+	NOT address_6502(12) AND NOT address_6502(2) AND NOT address_6502(1) AND 
+	NOT address_6502(11) AND NOT address_6502(9) AND NOT address_6502(8) AND 
+	NOT address_6502(3) AND NOT address_6502(6) AND NOT address_6502(5) AND 
+	NOT address_6502(10) AND NOT address_6502(7) AND NOT address_6502(4) AND 
+	NOT address_6502(15))));
 data_6502(5) <= data_6502_I(5) when data_6502_OE(5) = '1' else 'Z';
 data_6502_OE(5) <= (r_w_6502 AND aec);
 
 
 data_6502(6)_BUFR <= ((ddr_pio(1).EXP)
-	OR (address_6502(9) AND data_7501(6).PIN)
-	OR (address_6502(8) AND data_7501(6).PIN)
-	OR (address_6502(7) AND data_7501(6).PIN)
-	OR (address_6502(1) AND data_7501(6).PIN)
-	OR (address_6502(15) AND data_7501(6).PIN)
-	OR (address_6502(6) AND data_7501(6).PIN)
-	OR (address_6502(5) AND data_7501(6).PIN)
-	OR (address_6502(4) AND data_7501(6).PIN)
-	OR (address_6502(3) AND data_7501(6).PIN)
 	OR (address_6502(2) AND data_7501(6).PIN)
+	OR (address_6502(1) AND data_7501(6).PIN)
+	OR (address_6502(11) AND data_7501(6).PIN)
+	OR (address_6502(3) AND data_7501(6).PIN)
+	OR (address_6502(6) AND data_7501(6).PIN)
 	OR (address_6502(14) AND data_7501(6).PIN)
 	OR (address_6502(13) AND data_7501(6).PIN)
 	OR (address_6502(12) AND data_7501(6).PIN)
-	OR (address_6502(11) AND data_7501(6).PIN)
-	OR (address_6502(10) AND data_7501(6).PIN));
+	OR (address_6502(5) AND data_7501(6).PIN)
+	OR (address_6502(10) AND data_7501(6).PIN)
+	OR (address_6502(9) AND data_7501(6).PIN)
+	OR (address_6502(8) AND data_7501(6).PIN)
+	OR (address_6502(7) AND data_7501(6).PIN)
+	OR (address_6502(4) AND data_7501(6).PIN)
+	OR (address_6502(15) AND data_7501(6).PIN));
 
 
 data_6502_I(6) <= data_6502(6)_BUFR;
@@ -722,8 +722,8 @@ data_6502_OE(7) <= (r_w_6502 AND aec);
 
 
 data_6502(7)_BUFR <= (($OpTx$DEC_data_6502(7)_BUFR_MC$2)
-	OR (address_6502(6) AND data_7501(7).PIN)
-	OR (NOT r_w_6502 AND data_7501(7).PIN));
+	OR (NOT r_w_6502 AND data_7501(7).PIN)
+	OR (address_6502(12) AND data_7501(7).PIN));
 
 
 data_7501_I(0) <= data_6502(0).PIN;
@@ -766,137 +766,137 @@ data_7501(7) <= data_7501_I(7) when data_7501_OE(7) = '1' else 'Z';
 data_7501_OE(7) <= (NOT r_w_6502 AND aec);
 
 FDCPE_ddr_pio0: FDCPE port map (ddr_pio(0),data_6502(0).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(0));
-ddr_pio_CE(0) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(0) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_ddr_pio1: FDCPE port map (ddr_pio(1),data_6502(1).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(1));
-ddr_pio_CE(1) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(1) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_ddr_pio2: FDCPE port map (ddr_pio(2),data_6502(2).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(2));
-ddr_pio_CE(2) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(2) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_ddr_pio3: FDCPE port map (ddr_pio(3),data_6502(3).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(3));
-ddr_pio_CE(3) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(3) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_ddr_pio4: FDCPE port map (ddr_pio(4),data_6502(4).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(4));
-ddr_pio_CE(4) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(4) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_ddr_pio5: FDCPE port map (ddr_pio(5),data_6502(6).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(5));
-ddr_pio_CE(5) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(5) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_ddr_pio6: FDCPE port map (ddr_pio(6),data_6502(7).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(6));
-ddr_pio_CE(6) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND NOT address_6502(0));
+ddr_pio_CE(6) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 
 FDCPE_pio0: FDCPE port map (pio_I(0),data_6502(0).PIN,NOT clock,NOT _reset,'0',pio_CE(0));
-pio_CE(0) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(0) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(0) <= pio_I(0) when pio_OE(0) = '1' else 'Z';
 pio_OE(0) <= ddr_pio(0);
 
 FDCPE_pio1: FDCPE port map (pio_I(1),data_6502(1).PIN,NOT clock,NOT _reset,'0',pio_CE(1));
-pio_CE(1) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(1) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(1) <= pio_I(1) when pio_OE(1) = '1' else 'Z';
 pio_OE(1) <= ddr_pio(1);
 
 FDCPE_pio2: FDCPE port map (pio_I(2),data_6502(2).PIN,NOT clock,NOT _reset,'0',pio_CE(2));
-pio_CE(2) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(2) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(2) <= pio_I(2) when pio_OE(2) = '1' else 'Z';
 pio_OE(2) <= ddr_pio(2);
 
 FDCPE_pio3: FDCPE port map (pio_I(3),data_6502(3).PIN,NOT clock,NOT _reset,'0',pio_CE(3));
-pio_CE(3) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(3) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(3) <= pio_I(3) when pio_OE(3) = '1' else 'Z';
 pio_OE(3) <= ddr_pio(3);
 
 FDCPE_pio4: FDCPE port map (pio_I(4),data_6502(4).PIN,NOT clock,NOT _reset,'0',pio_CE(4));
-pio_CE(4) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(4) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(4) <= pio_I(4) when pio_OE(4) = '1' else 'Z';
 pio_OE(4) <= ddr_pio(4);
 
 FDCPE_pio5: FDCPE port map (pio_I(5),data_6502(6).PIN,NOT clock,NOT _reset,'0',pio_CE(5));
-pio_CE(5) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(5) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(5) <= pio_I(5) when pio_OE(5) = '1' else 'Z';
 pio_OE(5) <= ddr_pio(5);
 
 FDCPE_pio6: FDCPE port map (pio_I(6),data_6502(7).PIN,NOT clock,NOT _reset,'0',pio_CE(6));
-pio_CE(6) <= (NOT address_6502(9) AND NOT address_6502(8) AND 
-	NOT address_6502(7) AND NOT address_6502(14) AND NOT address_6502(13) AND 
-	NOT address_6502(12) AND NOT address_6502(11) AND NOT address_6502(10) AND 
-	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(4) AND 
-	NOT address_6502(3) AND NOT address_6502(2) AND NOT address_6502(1) AND 
-	NOT address_6502(15) AND NOT r_w_6502 AND address_6502(0));
+pio_CE(6) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
 pio(6) <= pio_I(6) when pio_OE(6) = '1' else 'Z';
 pio_OE(6) <= ddr_pio(6);
 
 
 r_w_7501_I <= r_w_6502;
 r_w_7501 <= r_w_7501_I when r_w_7501_OE = '1' else 'Z';
-r_w_7501_OE <= (aec AND NOT r_w_latched);
+r_w_7501_OE <= NOT r_w_latched;
 
-FDCPE_r_w_latched: FDCPE port map (r_w_latched,NOT aec,gate_in,'0','0');
+FDCPE_r_w_latched: FDCPE port map (r_w_latched,NOT aec,gate_in,NOT _reset,'0');
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 

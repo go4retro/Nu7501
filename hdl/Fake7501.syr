@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.15 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: Fake7501.prj
 
@@ -55,8 +55,8 @@ XOR Preserve                       : YES
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Speed
-Optimization Effort                : 1
+Optimization Goal                  : Area
+Optimization Effort                : 2
 Keep Hierarchy                     : Yes
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -111,6 +111,7 @@ Synthesizing Unit <Fake7501>.
     Found 7-bit register for signal <ddr_pio>.
     Found 1-bit register for signal <r_w_latched>.
     Summary:
+	inferred   1 D-type flip-flop(s).
 	inferred  40 Tristate(s).
 Unit <Fake7501> synthesized.
 
@@ -137,7 +138,10 @@ Macro Statistics
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
 =========================================================================
 
 =========================================================================
@@ -164,7 +168,7 @@ Final Results
 RTL Top Level Output File Name     : Fake7501.ngr
 Top Level Output File Name         : Fake7501
 Output Format                      : NGC
-Optimization Goal                  : Speed
+Optimization Goal                  : Area
 Keep Hierarchy                     : Yes
 Target Technology                  : XC9500XL CPLDs
 Macro Preserve                     : YES
@@ -176,15 +180,14 @@ Design Statistics
 # IOs                              : 61
 
 Cell Usage :
-# BELS                             : 95
-#      AND2                        : 36
-#      AND3                        : 3
-#      AND7                        : 1
-#      AND8                        : 1
-#      INV                         : 40
+# BELS                             : 93
+#      AND2                        : 25
+#      AND3                        : 11
+#      INV                         : 36
 #      OR2                         : 14
+#      OR3                         : 7
 # FlipFlops/Latches                : 15
-#      FD                          : 1
+#      FDC                         : 1
 #      FDCE                        : 14
 # IO Buffers                       : 61
 #      IBUF                        : 21
@@ -194,11 +197,11 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.27 secs
+Total CPU time to Xst completion: 3.99 secs
  
 --> 
 
-Total memory usage is 4497004 kilobytes
+Total memory usage is 4497048 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

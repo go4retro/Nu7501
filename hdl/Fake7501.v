@@ -52,11 +52,15 @@ assign pio[2] =            (ddr_pio[2] ? data_pio[2] : 'bz);
 assign pio[1] =            (ddr_pio[1] ? data_pio[1] : 'bz);
 assign pio[0] =            (ddr_pio[0] ? data_pio[0] : 'bz);
 
-assign r_w_7501 = (aec ? (r_w_latched ? 'bz : r_w_6502) : 'bz);
+assign r_w_7501 = (r_w_latched ? 'bz : r_w_6502);
 
-always @(posedge gate_in)
+always @(posedge gate_in, negedge _reset)
 begin
-	if(!aec)
+	if(!_reset)
+		begin
+			r_w_latched = 'b0;
+		end
+	else if(!aec)
 		begin
 			r_w_latched = 'b1;
 		end

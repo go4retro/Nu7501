@@ -2,150 +2,150 @@ MDF Database:  version 1.0
 MDF_INFO | Fake7501 | XC9572XL-10-TQ100
 MACROCELL | 0 | 1 | data_pio<0>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<0>.PIN  | ddr_pio<0>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<0>.PIN  | ddr_pio<0>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 0 | 14
-INPUTP | 18 | 6 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 6 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<0>.D = data_6502<0>.PIN;
    !pio<0>.CLK = clock;	// GCK
    !pio<0>.AR = _reset;	// GSR
    pio<0>.OE = ddr_pio<0>;
-   pio<0>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<0>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 1 | 3 | data_pio<1>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<1>.PIN  | ddr_pio<1>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<1>.PIN  | ddr_pio<1>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 3 | 3
-INPUTP | 18 | 8 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 8 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<1>.D = data_6502<1>.PIN;
    !pio<1>.CLK = clock;	// GCK
    !pio<1>.AR = _reset;	// GSR
    pio<1>.OE = ddr_pio<1>;
-   pio<1>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<1>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 1 | 2 | data_pio<2>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<2>.PIN  | ddr_pio<2>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<2>.PIN  | ddr_pio<2>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 2 | 2
-INPUTP | 18 | 10 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 10 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<2>.D = data_6502<2>.PIN;
    !pio<2>.CLK = clock;	// GCK
    !pio<2>.AR = _reset;	// GSR
    pio<2>.OE = ddr_pio<2>;
-   pio<2>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<2>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 14 | data_pio<3>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<3>.PIN  | ddr_pio<3>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<3>.PIN  | ddr_pio<3>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 2 | 0
-INPUTP | 18 | 12 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 12 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<3>.D = data_6502<3>.PIN;
    !pio<3>.CLK = clock;	// GCK
    !pio<3>.AR = _reset;	// GSR
    pio<3>.OE = ddr_pio<3>;
-   pio<3>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<3>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 15 | data_pio<4>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<4>.PIN  | ddr_pio<4>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<4>.PIN  | ddr_pio<4>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 1 | 10
-INPUTP | 18 | 85 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 85 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<4>.D = data_6502<4>.PIN;
    !pio<4>.CLK = clock;	// GCK
    !pio<4>.AR = _reset;	// GSR
    pio<4>.OE = ddr_pio<4>;
-   pio<4>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<4>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 11 | data_pio<5>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<6>.PIN  | ddr_pio<5>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<6>.PIN  | ddr_pio<5>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 3 | 1
-INPUTP | 18 | 80 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 80 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<5>.D = data_6502<6>.PIN;
    !pio<5>.CLK = clock;	// GCK
    !pio<5>.AR = _reset;	// GSR
    pio<5>.OE = ddr_pio<5>;
-   pio<5>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<5>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 17 | data_pio<6>
 ATTRIBUTES | 8693570 | 0
-INPUTS | 19 | data_6502<7>.PIN  | ddr_pio<6>  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
+INPUTS | 19 | data_6502<7>.PIN  | ddr_pio<6>  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
 INPUTMC | 1 | 1 | 8
-INPUTP | 18 | 78 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTP | 18 | 78 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 10 | 
    pio<6>.D = data_6502<7>.PIN;
    !pio<6>.CLK = clock;	// GCK
    !pio<6>.AR = _reset;	// GSR
    pio<6>.OE = ddr_pio<6>;
-   pio<6>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & address_6502<0>;
+   pio<6>.CE = !r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 16 | data_6502_5_IOBUFE
 ATTRIBUTES | 265986 | 0
-INPUTS | 18 | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | data_7501<5>.PIN  | aec
-INPUTP | 18 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 5 | 27
+INPUTS | 18 | r_w_6502  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | data_7501<5>.PIN  | aec
+INPUTP | 18 | 3 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 5 | 27
 EQ | 8 | 
    !data_6502<5> = !data_7501<5>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502;
+	# r_w_6502 & !address_6502<14> & !address_6502<13> & 
+	!address_6502<12> & !address_6502<2> & !address_6502<1> & 
+	!address_6502<11> & !address_6502<9> & !address_6502<8> & 
+	!address_6502<3> & !address_6502<6> & !address_6502<5> & 
+	!address_6502<10> & !address_6502<7> & !address_6502<4> & 
+	!address_6502<15>;
    data_6502<5>.OE = r_w_6502 & aec;
 
 MACROCELL | 0 | 14 | ddr_pio<0>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 3 | 0 | 1 | 0 | 14 | 0 | 15
-INPUTS | 21 | data_7501<0>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>  | ddr_pio<0>  | pio<0>.PIN  | data_6502<1>_BUFR.EXP
+INPUTS | 21 | data_7501<0>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | ddr_pio<0>  | pio<0>.PIN  | data_6502<1>_BUFR.EXP
 INPUTMC | 2 | 0 | 14 | 0 | 13
-INPUTP | 19 | 89 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20 | 11
+INPUTP | 19 | 89 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 11
 EXPORTS | 1 | 0 | 15
 IMPORTS | 1 | 0 | 13
 EQ | 24 | 
@@ -153,399 +153,410 @@ EQ | 24 |
 	  data_6502<0>.PIN;
    !ddr_pio<0>.CLK = clock;	// GCK
    !ddr_pio<0>.AR = _reset;	// GSR
-   ddr_pio<0>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
-    ddr_pio<0>.EXP  =  address_6502<6> & data_7501<0>.PIN
-	# !r_w_6502 & data_7501<0>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<0> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<0>.PIN
+   ddr_pio<0>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
+    ddr_pio<0>.EXP  =  !r_w_6502 & data_7501<0>.PIN
+	# address_6502<12> & data_7501<0>.PIN
+	# ddr_pio<0> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<0>.PIN
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 3 | ddr_pio<1>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 3 | 1 | 3 | 0 | 10 | 3 | 4
-INPUTS | 21 | data_6502<1>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>  | data_7501<6>.PIN  | ddr_pio<5>  | pio<5>.PIN
+INPUTS | 21 | data_6502<1>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | data_7501<6>.PIN  | ddr_pio<5>  | pio<5>.PIN
 INPUTMC | 1 | 3 | 1
-INPUTP | 20 | 8 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20 | 7 | 75
+INPUTP | 20 | 8 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 7 | 75
 EXPORTS | 1 | 3 | 4
 EQ | 22 | 
    ddr_pio<1>.D = data_6502<1>.PIN;
    !ddr_pio<1>.CLK = clock;	// GCK
    !ddr_pio<1>.AR = _reset;	// GSR
-   ddr_pio<1>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
+   ddr_pio<1>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
     ddr_pio<1>.EXP  =  !r_w_6502 & data_7501<6>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<5> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<5>.PIN
+	# ddr_pio<5> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<5>.PIN
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 2 | 2 | ddr_pio<2>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 2 | 1 | 2 | 2 | 13
-INPUTS | 18 | data_6502<2>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
-INPUTP | 18 | 10 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTS | 18 | data_6502<2>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
+INPUTP | 18 | 10 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 9 | 
    ddr_pio<2>.D = data_6502<2>.PIN;
    !ddr_pio<2>.CLK = clock;	// GCK
    !ddr_pio<2>.AR = _reset;	// GSR
-   ddr_pio<2>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
+   ddr_pio<2>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 2 | 0 | ddr_pio<3>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 2 | 3 | 14 | 3 | 10
-INPUTS | 18 | data_6502<3>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
-INPUTP | 18 | 12 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTS | 18 | data_6502<3>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
+INPUTP | 18 | 12 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 9 | 
    ddr_pio<3>.D = data_6502<3>.PIN;
    !ddr_pio<3>.CLK = clock;	// GCK
    !ddr_pio<3>.AR = _reset;	// GSR
-   ddr_pio<3>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
+   ddr_pio<3>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 1 | 10 | ddr_pio<4>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 2 | 3 | 15 | 2 | 8
-INPUTS | 18 | data_6502<4>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
-INPUTP | 18 | 85 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTS | 18 | data_6502<4>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
+INPUTP | 18 | 85 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 9 | 
    ddr_pio<4>.D = data_6502<4>.PIN;
    !ddr_pio<4>.CLK = clock;	// GCK
    !ddr_pio<4>.AR = _reset;	// GSR
-   ddr_pio<4>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
+   ddr_pio<4>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 3 | 1 | ddr_pio<5>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 2 | 3 | 11 | 3 | 3
-INPUTS | 18 | data_6502<6>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
-INPUTP | 18 | 80 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTS | 18 | data_6502<6>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
+INPUTP | 18 | 80 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 9 | 
    ddr_pio<5>.D = data_6502<6>.PIN;
    !ddr_pio<5>.CLK = clock;	// GCK
    !ddr_pio<5>.AR = _reset;	// GSR
-   ddr_pio<5>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
+   ddr_pio<5>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 1 | 8 | ddr_pio<6>
 ATTRIBUTES | 8561472 | 0
 OUTPUTMC | 2 | 3 | 17 | 3 | 13
-INPUTS | 18 | data_6502<7>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>
-INPUTP | 18 | 78 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20
+INPUTS | 18 | data_6502<7>.PIN  | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>
+INPUTP | 18 | 78 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74
 EQ | 9 | 
    ddr_pio<6>.D = data_6502<7>.PIN;
    !ddr_pio<6>.CLK = clock;	// GCK
    !ddr_pio<6>.AR = _reset;	// GSR
-   ddr_pio<6>.CE = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & !r_w_6502 & !address_6502<0>;
+   ddr_pio<6>.CE = !r_w_6502 & !address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15>;
 GLOBALS | 2 | 2 | clock | 4 | _reset
 
 MACROCELL | 0 | 16 | data_6502<0>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 1 | 12
-INPUTS | 8 | address_6502<10>  | data_7501<0>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<13>  | address_6502<14>  | EXP16_.EXP  | address_6502_8_IBUF$BUF0.EXP
+INPUTS | 8 | address_6502<7>  | data_7501<0>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<9>  | address_6502<8>  | EXP16_.EXP  | address_6502_8_IBUF$BUF0.EXP
 INPUTMC | 2 | 0 | 15 | 0 | 17
-INPUTP | 6 | 50 | 89 | 53 | 67 | 70 | 72
+INPUTP | 6 | 43 | 89 | 32 | 74 | 48 | 46
 IMPORTS | 2 | 0 | 15 | 0 | 17
 EQ | 31 | 
-   data_6502<0>_BUFR = address_6502<14> & data_7501<0>.PIN
-	# address_6502<13> & data_7501<0>.PIN
-	# address_6502<12> & data_7501<0>.PIN
-	# address_6502<11> & data_7501<0>.PIN
-	# address_6502<10> & data_7501<0>.PIN
-;Imported pterms FB1_16
-	# address_6502<9> & data_7501<0>.PIN
+   data_6502<0>_BUFR = address_6502<9> & data_7501<0>.PIN
 	# address_6502<8> & data_7501<0>.PIN
 	# address_6502<7> & data_7501<0>.PIN
-	# address_6502<1> & data_7501<0>.PIN
-	# address_6502<15> & data_7501<0>.PIN
-;Imported pterms FB1_15
-	# address_6502<6> & data_7501<0>.PIN
-	# !r_w_6502 & data_7501<0>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<0> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<0>.PIN
-;Imported pterms FB1_18
-	# address_6502<5> & data_7501<0>.PIN
 	# address_6502<4> & data_7501<0>.PIN
+	# address_6502<15> & data_7501<0>.PIN
+;Imported pterms FB1_16
+	# address_6502<2> & data_7501<0>.PIN
+	# address_6502<1> & data_7501<0>.PIN
+	# address_6502<11> & data_7501<0>.PIN
 	# address_6502<3> & data_7501<0>.PIN
-	# address_6502<2> & data_7501<0>.PIN;
+	# address_6502<6> & data_7501<0>.PIN
+;Imported pterms FB1_15
+	# !r_w_6502 & data_7501<0>.PIN
+	# address_6502<12> & data_7501<0>.PIN
+	# ddr_pio<0> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<0>.PIN
+;Imported pterms FB1_18
+	# address_6502<14> & data_7501<0>.PIN
+	# address_6502<13> & data_7501<0>.PIN
+	# address_6502<5> & data_7501<0>.PIN
+	# address_6502<10> & data_7501<0>.PIN;
 
 MACROCELL | 0 | 13 | data_6502<1>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 1 | 15 | 0 | 14
-INPUTS | 7 | address_6502<10>  | data_7501<1>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<13>  | data_6502<0>.PIN  | EXP15_.EXP
+INPUTS | 7 | address_6502<7>  | data_7501<1>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<9>  | data_6502<0>.PIN  | EXP15_.EXP
 INPUTMC | 1 | 0 | 12
-INPUTP | 6 | 50 | 88 | 53 | 67 | 70 | 6
+INPUTP | 6 | 43 | 88 | 32 | 74 | 48 | 6
 EXPORTS | 1 | 0 | 14
 IMPORTS | 1 | 0 | 12
 EQ | 32 | 
-   data_6502<1>_BUFR = address_6502<13> & data_7501<1>.PIN
-	# address_6502<12> & data_7501<1>.PIN
-	# address_6502<11> & data_7501<1>.PIN
-	# address_6502<10> & data_7501<1>.PIN
-;Imported pterms FB1_13
-	# address_6502<9> & data_7501<1>.PIN
-	# address_6502<8> & data_7501<1>.PIN
+   data_6502<1>_BUFR = address_6502<9> & data_7501<1>.PIN
 	# address_6502<7> & data_7501<1>.PIN
-	# address_6502<14> & data_7501<1>.PIN
-	# address_6502<15> & data_7501<1>.PIN
-;Imported pterms FB1_12
-	# address_6502<5> & data_7501<1>.PIN
 	# address_6502<4> & data_7501<1>.PIN
-	# address_6502<3> & data_7501<1>.PIN
+	# address_6502<15> & data_7501<1>.PIN
+;Imported pterms FB1_13
 	# address_6502<2> & data_7501<1>.PIN
 	# address_6502<1> & data_7501<1>.PIN
-;Imported pterms FB1_11
+	# address_6502<11> & data_7501<1>.PIN
+	# address_6502<8> & data_7501<1>.PIN
+	# address_6502<3> & data_7501<1>.PIN
+;Imported pterms FB1_12
+	# address_6502<14> & data_7501<1>.PIN
+	# address_6502<13> & data_7501<1>.PIN
 	# address_6502<6> & data_7501<1>.PIN
+	# address_6502<5> & data_7501<1>.PIN
+	# address_6502<10> & data_7501<1>.PIN
+;Imported pterms FB1_11
 	# !r_w_6502 & data_7501<1>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<1> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<1>.PIN;
+	# address_6502<12> & data_7501<1>.PIN
+	# ddr_pio<1> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<1>.PIN;
     data_6502<1>_BUFR.EXP  =  data_6502<0>.PIN
 
 MACROCELL | 2 | 15 | data_6502<2>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 1 | 16
-INPUTS | 8 | address_6502<10>  | data_7501<2>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<13>  | address_6502<14>  | EXP20_.EXP  | address_6502_13_IBUF$BUF0.EXP
+INPUTS | 8 | address_6502<7>  | data_7501<2>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<9>  | address_6502<8>  | EXP20_.EXP  | address_6502_13_IBUF$BUF0.EXP
 INPUTMC | 2 | 2 | 14 | 2 | 16
-INPUTP | 6 | 50 | 87 | 53 | 67 | 70 | 72
+INPUTP | 6 | 43 | 87 | 32 | 74 | 48 | 46
 IMPORTS | 2 | 2 | 14 | 2 | 16
 EQ | 31 | 
-   data_6502<2>_BUFR = address_6502<14> & data_7501<2>.PIN
-	# address_6502<13> & data_7501<2>.PIN
-	# address_6502<12> & data_7501<2>.PIN
-	# address_6502<11> & data_7501<2>.PIN
-	# address_6502<10> & data_7501<2>.PIN
-;Imported pterms FB3_15
-	# address_6502<9> & data_7501<2>.PIN
+   data_6502<2>_BUFR = address_6502<9> & data_7501<2>.PIN
 	# address_6502<8> & data_7501<2>.PIN
 	# address_6502<7> & data_7501<2>.PIN
-	# address_6502<1> & data_7501<2>.PIN
-	# address_6502<15> & data_7501<2>.PIN
-;Imported pterms FB3_14
-	# address_6502<6> & data_7501<2>.PIN
-	# !r_w_6502 & data_7501<2>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<2> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<2>.PIN
-;Imported pterms FB3_17
-	# address_6502<5> & data_7501<2>.PIN
 	# address_6502<4> & data_7501<2>.PIN
+	# address_6502<15> & data_7501<2>.PIN
+;Imported pterms FB3_15
+	# address_6502<2> & data_7501<2>.PIN
+	# address_6502<1> & data_7501<2>.PIN
+	# address_6502<11> & data_7501<2>.PIN
 	# address_6502<3> & data_7501<2>.PIN
-	# address_6502<2> & data_7501<2>.PIN;
+	# address_6502<6> & data_7501<2>.PIN
+;Imported pterms FB3_14
+	# !r_w_6502 & data_7501<2>.PIN
+	# address_6502<12> & data_7501<2>.PIN
+	# ddr_pio<2> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<2>.PIN
+;Imported pterms FB3_17
+	# address_6502<14> & data_7501<2>.PIN
+	# address_6502<13> & data_7501<2>.PIN
+	# address_6502<5> & data_7501<2>.PIN
+	# address_6502<10> & data_7501<2>.PIN;
 
 MACROCELL | 3 | 8 | data_6502<3>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 0 | 4
-INPUTS | 8 | address_6502<10>  | data_7501<3>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<13>  | address_6502<14>  | EXP24_.EXP  | EXP25_.EXP
+INPUTS | 8 | address_6502<7>  | data_7501<3>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<9>  | address_6502<8>  | EXP24_.EXP  | EXP25_.EXP
 INPUTMC | 2 | 3 | 7 | 3 | 9
-INPUTP | 6 | 50 | 1 | 53 | 67 | 70 | 72
+INPUTP | 6 | 43 | 1 | 32 | 74 | 48 | 46
 IMPORTS | 2 | 3 | 7 | 3 | 9
 EQ | 31 | 
-   data_6502<3>_BUFR = address_6502<14> & data_7501<3>.PIN
-	# address_6502<13> & data_7501<3>.PIN
-	# address_6502<12> & data_7501<3>.PIN
-	# address_6502<11> & data_7501<3>.PIN
-	# address_6502<10> & data_7501<3>.PIN
-;Imported pterms FB4_8
-	# address_6502<9> & data_7501<3>.PIN
+   data_6502<3>_BUFR = address_6502<9> & data_7501<3>.PIN
 	# address_6502<8> & data_7501<3>.PIN
 	# address_6502<7> & data_7501<3>.PIN
-	# address_6502<1> & data_7501<3>.PIN
-	# address_6502<15> & data_7501<3>.PIN
-;Imported pterms FB4_10
-	# address_6502<6> & data_7501<3>.PIN
-	# address_6502<5> & data_7501<3>.PIN
 	# address_6502<4> & data_7501<3>.PIN
-	# address_6502<3> & data_7501<3>.PIN
+	# address_6502<15> & data_7501<3>.PIN
+;Imported pterms FB4_8
 	# address_6502<2> & data_7501<3>.PIN
+	# address_6502<1> & data_7501<3>.PIN
+	# address_6502<11> & data_7501<3>.PIN
+	# address_6502<3> & data_7501<3>.PIN
+	# address_6502<6> & data_7501<3>.PIN
+;Imported pterms FB4_10
+	# address_6502<14> & data_7501<3>.PIN
+	# address_6502<13> & data_7501<3>.PIN
+	# address_6502<12> & data_7501<3>.PIN
+	# address_6502<5> & data_7501<3>.PIN
+	# address_6502<10> & data_7501<3>.PIN
 ;Imported pterms FB4_11
 	# !r_w_6502 & data_7501<3>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<3> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<3>.PIN;
+	# ddr_pio<3> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<3>.PIN;
 
 MACROCELL | 2 | 10 | data_6502<4>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 1 | 17
-INPUTS | 8 | address_6502<10>  | data_7501<4>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<13>  | address_6502<14>  | EXP17_.EXP  | EXP18_.EXP
+INPUTS | 8 | address_6502<7>  | data_7501<4>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<9>  | address_6502<8>  | EXP17_.EXP  | EXP18_.EXP
 INPUTMC | 2 | 2 | 9 | 2 | 11
-INPUTP | 6 | 50 | 2 | 53 | 67 | 70 | 72
+INPUTP | 6 | 43 | 2 | 32 | 74 | 48 | 46
 IMPORTS | 2 | 2 | 9 | 2 | 11
 EQ | 31 | 
-   data_6502<4>_BUFR = address_6502<14> & data_7501<4>.PIN
-	# address_6502<13> & data_7501<4>.PIN
-	# address_6502<12> & data_7501<4>.PIN
-	# address_6502<11> & data_7501<4>.PIN
-	# address_6502<10> & data_7501<4>.PIN
-;Imported pterms FB3_10
-	# address_6502<9> & data_7501<4>.PIN
+   data_6502<4>_BUFR = address_6502<9> & data_7501<4>.PIN
 	# address_6502<8> & data_7501<4>.PIN
 	# address_6502<7> & data_7501<4>.PIN
-	# address_6502<1> & data_7501<4>.PIN
+	# address_6502<4> & data_7501<4>.PIN
 	# address_6502<15> & data_7501<4>.PIN
+;Imported pterms FB3_10
+	# address_6502<2> & data_7501<4>.PIN
+	# address_6502<1> & data_7501<4>.PIN
+	# address_6502<11> & data_7501<4>.PIN
+	# address_6502<3> & data_7501<4>.PIN
+	# address_6502<6> & data_7501<4>.PIN
 ;Imported pterms FB3_9
 	# !r_w_6502 & data_7501<4>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<4> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<4>.PIN
+	# ddr_pio<4> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<4>.PIN
 ;Imported pterms FB3_12
-	# address_6502<6> & data_7501<4>.PIN
+	# address_6502<14> & data_7501<4>.PIN
+	# address_6502<13> & data_7501<4>.PIN
+	# address_6502<12> & data_7501<4>.PIN
 	# address_6502<5> & data_7501<4>.PIN
-	# address_6502<4> & data_7501<4>.PIN
-	# address_6502<3> & data_7501<4>.PIN
-	# address_6502<2> & data_7501<4>.PIN;
+	# address_6502<10> & data_7501<4>.PIN;
 
 MACROCELL | 3 | 5 | data_6502<6>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 1 | 0
-INPUTS | 8 | address_6502<10>  | data_7501<6>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<13>  | address_6502<14>  | EXP22_.EXP  | EXP23_.EXP
+INPUTS | 8 | address_6502<7>  | data_7501<6>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<9>  | address_6502<8>  | EXP22_.EXP  | EXP23_.EXP
 INPUTMC | 2 | 3 | 4 | 3 | 6
-INPUTP | 6 | 50 | 7 | 53 | 67 | 70 | 72
+INPUTP | 6 | 43 | 7 | 32 | 74 | 48 | 46
 IMPORTS | 2 | 3 | 4 | 3 | 6
 EQ | 31 | 
-   data_6502<6>_BUFR = address_6502<14> & data_7501<6>.PIN
-	# address_6502<13> & data_7501<6>.PIN
-	# address_6502<12> & data_7501<6>.PIN
-	# address_6502<11> & data_7501<6>.PIN
-	# address_6502<10> & data_7501<6>.PIN
-;Imported pterms FB4_5
-	# address_6502<9> & data_7501<6>.PIN
+   data_6502<6>_BUFR = address_6502<9> & data_7501<6>.PIN
 	# address_6502<8> & data_7501<6>.PIN
 	# address_6502<7> & data_7501<6>.PIN
-	# address_6502<1> & data_7501<6>.PIN
+	# address_6502<4> & data_7501<6>.PIN
 	# address_6502<15> & data_7501<6>.PIN
+;Imported pterms FB4_5
+	# address_6502<2> & data_7501<6>.PIN
+	# address_6502<1> & data_7501<6>.PIN
+	# address_6502<11> & data_7501<6>.PIN
+	# address_6502<3> & data_7501<6>.PIN
+	# address_6502<6> & data_7501<6>.PIN
 ;Imported pterms FB4_4
 	# !r_w_6502 & data_7501<6>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<5> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<5>.PIN
+	# ddr_pio<5> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<5>.PIN
 ;Imported pterms FB4_7
-	# address_6502<6> & data_7501<6>.PIN
+	# address_6502<14> & data_7501<6>.PIN
+	# address_6502<13> & data_7501<6>.PIN
+	# address_6502<12> & data_7501<6>.PIN
 	# address_6502<5> & data_7501<6>.PIN
-	# address_6502<4> & data_7501<6>.PIN
-	# address_6502<3> & data_7501<6>.PIN
-	# address_6502<2> & data_7501<6>.PIN;
+	# address_6502<10> & data_7501<6>.PIN;
 
 MACROCELL | 0 | 0 | data_6502<7>_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 3 | 12 | 0 | 17
-INPUTS | 5 | address_6502<8>  | data_7501<7>.PIN  | address_6502<6>  | r_w_6502  | $OpTx$DEC_data_6502<7>_BUFR_MC$2
+INPUTS | 5 | address_6502<8>  | data_7501<7>.PIN  | address_6502<12>  | r_w_6502  | $OpTx$DEC_data_6502<7>_BUFR_MC$2
 INPUTMC | 1 | 0 | 2
-INPUTP | 4 | 46 | 9 | 37 | 3
+INPUTP | 4 | 46 | 9 | 67 | 3
 EXPORTS | 1 | 0 | 17
 EQ | 4 | 
    data_6502<7>_BUFR = $OpTx$DEC_data_6502<7>_BUFR_MC$2
-	# address_6502<6> & data_7501<7>.PIN
-	# !r_w_6502 & data_7501<7>.PIN;
+	# !r_w_6502 & data_7501<7>.PIN
+	# address_6502<12> & data_7501<7>.PIN;
     data_6502<7>_BUFR.EXP  =  address_6502<8>
+
+MACROCELL | 3 | 0 | r_w_latched
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 2 | aec  | gate_in
+INPUTP | 2 | 27 | 71
+EQ | 3 | 
+   r_w_latched.D = !aec;
+   r_w_latched.CLK = gate_in;
+   !r_w_latched.AR = _reset;	// GSR
+GLOBALS | 1 | 4 | _reset
 
 MACROCELL | 2 | 1 | address_6502_0_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
@@ -574,46 +585,46 @@ EQ | 2 |
 MACROCELL | 2 | 13 | address_6502_12_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 2 | 14
-INPUTS | 22 | address_6502<6>  | aec  | data_7501<2>.PIN  | r_w_6502  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | ddr_pio<2>  | address_6502<0>  | pio<2>.PIN  | EXP19_.EXP
+INPUTS | 22 | r_w_6502  | aec  | data_7501<2>.PIN  | address_6502<12>  | ddr_pio<2>  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | pio<2>.PIN  | EXP19_.EXP
 INPUTMC | 2 | 2 | 2 | 2 | 12
-INPUTP | 20 | 37 | 27 | 87 | 3 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 35 | 32 | 30 | 14 | 16 | 74 | 20 | 84
+INPUTP | 20 | 3 | 27 | 87 | 67 | 20 | 72 | 70 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 84
 EXPORTS | 1 | 2 | 14
 IMPORTS | 1 | 2 | 12
 EQ | 17 | 
    address_7501<12> = ;Imported pterms FB3_13
 	  address_6502<12>;
    address_7501<12>.OE = aec;
-    address_6502_12_IBUF$BUF0.EXP  =  address_6502<6> & data_7501<2>.PIN
-	# !r_w_6502 & data_7501<2>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<2> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<2>.PIN
+    address_6502_12_IBUF$BUF0.EXP  =  !r_w_6502 & data_7501<2>.PIN
+	# address_6502<12> & data_7501<2>.PIN
+	# ddr_pio<2> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<2>.PIN
 
 MACROCELL | 2 | 16 | address_6502_13_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 2 | 15
-INPUTS | 7 | address_6502<5>  | aec  | data_7501<2>.PIN  | address_6502<4>  | address_6502<3>  | address_6502<2>  | EXP21_.EXP
+INPUTS | 7 | address_6502<14>  | aec  | data_7501<2>.PIN  | address_6502<13>  | address_6502<5>  | address_6502<10>  | EXP21_.EXP
 INPUTMC | 1 | 2 | 17
-INPUTP | 6 | 35 | 27 | 87 | 32 | 30 | 14
+INPUTP | 6 | 72 | 27 | 87 | 70 | 35 | 50
 EXPORTS | 1 | 2 | 15
 IMPORTS | 1 | 2 | 17
 EQ | 7 | 
    address_7501<13> = ;Imported pterms FB3_18
 	  address_6502<13>;
    address_7501<13>.OE = aec;
-    address_6502_13_IBUF$BUF0.EXP  =  address_6502<5> & data_7501<2>.PIN
-	# address_6502<4> & data_7501<2>.PIN
-	# address_6502<3> & data_7501<2>.PIN
-	# address_6502<2> & data_7501<2>.PIN
+    address_6502_13_IBUF$BUF0.EXP  =  address_6502<14> & data_7501<2>.PIN
+	# address_6502<13> & data_7501<2>.PIN
+	# address_6502<5> & data_7501<2>.PIN
+	# address_6502<10> & data_7501<2>.PIN
 
 MACROCELL | 3 | 2 | address_6502_14_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
@@ -626,26 +637,26 @@ EQ | 2 |
 MACROCELL | 3 | 10 | address_6502_15_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 3 | 9
-INPUTS | 21 | address_6502<15>  | aec  | r_w_6502  | data_7501<3>.PIN  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | ddr_pio<3>  | address_6502<0>  | pio<3>.PIN
+INPUTS | 21 | address_6502<15>  | aec  | r_w_6502  | data_7501<3>.PIN  | ddr_pio<3>  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | pio<3>.PIN
 INPUTMC | 1 | 2 | 0
-INPUTP | 20 | 74 | 27 | 3 | 1 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 20 | 82
+INPUTP | 20 | 74 | 27 | 3 | 1 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 82
 EXPORTS | 1 | 3 | 9
 EQ | 15 | 
    address_7501<15> = address_6502<15>;
    address_7501<15>.OE = aec;
     address_6502_15_IBUF$BUF0.EXP  =  !r_w_6502 & data_7501<3>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<3> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<3>.PIN
+	# ddr_pio<3> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<3>.PIN
 
 MACROCELL | 0 | 6 | address_6502_1_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
@@ -661,29 +672,29 @@ EQ | 3 |
 MACROCELL | 0 | 10 | address_6502_2_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 0 | 11
-INPUTS | 22 | address_6502<6>  | aec  | data_7501<1>.PIN  | r_w_6502  | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | ddr_pio<1>  | address_6502<0>  | pio<1>.PIN  | $OpTx$DEC_data_6502<7>_BUFR_MC$3.EXP
+INPUTS | 22 | r_w_6502  | aec  | data_7501<1>.PIN  | address_6502<12>  | ddr_pio<1>  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | pio<1>.PIN  | $OpTx$DEC_data_6502<7>_BUFR_MC$3.EXP
 INPUTMC | 2 | 3 | 3 | 0 | 9
-INPUTP | 20 | 37 | 27 | 88 | 3 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 35 | 32 | 30 | 14 | 16 | 74 | 20 | 86
+INPUTP | 20 | 3 | 27 | 88 | 67 | 20 | 72 | 70 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 86
 EXPORTS | 1 | 0 | 11
 IMPORTS | 1 | 0 | 9
 EQ | 17 | 
    address_7501<2> = ;Imported pterms FB1_10
 	  address_6502<2>;
    address_7501<2>.OE = aec;
-    address_6502_2_IBUF$BUF0.EXP  =  address_6502<6> & data_7501<1>.PIN
-	# !r_w_6502 & data_7501<1>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<1> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<1>.PIN
+    address_6502_2_IBUF$BUF0.EXP  =  !r_w_6502 & data_7501<1>.PIN
+	# address_6502<12> & data_7501<1>.PIN
+	# ddr_pio<1> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<1>.PIN
 
 MACROCELL | 0 | 3 | address_6502_3_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
@@ -696,19 +707,19 @@ EQ | 2 |
 MACROCELL | 0 | 7 | address_6502_4_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 0 | 8
-INPUTS | 7 | address_6502<3>  | aec  | data_7501<7>.PIN  | address_6502<2>  | address_6502<1>  | address_6502<15>  | address_6502_1_IBUF$BUF0.EXP
+INPUTS | 7 | address_6502<11>  | aec  | data_7501<7>.PIN  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502_1_IBUF$BUF0.EXP
 INPUTMC | 1 | 0 | 6
-INPUTP | 6 | 30 | 27 | 9 | 14 | 16 | 74
+INPUTP | 6 | 53 | 27 | 9 | 37 | 35 | 50
 EXPORTS | 1 | 0 | 8
 IMPORTS | 1 | 0 | 6
 EQ | 7 | 
    address_7501<4> = ;Imported pterms FB1_7
 	  address_6502<4>;
    address_7501<4>.OE = aec;
-    address_6502_4_IBUF$BUF0.EXP  =  address_6502<3> & data_7501<7>.PIN
-	# address_6502<2> & data_7501<7>.PIN
-	# address_6502<1> & data_7501<7>.PIN
-	# address_6502<15> & data_7501<7>.PIN
+    address_6502_4_IBUF$BUF0.EXP  =  address_6502<11> & data_7501<7>.PIN
+	# address_6502<6> & data_7501<7>.PIN
+	# address_6502<5> & data_7501<7>.PIN
+	# address_6502<10> & data_7501<7>.PIN
 
 MACROCELL | 0 | 5 | address_6502_5_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
@@ -737,43 +748,43 @@ EQ | 2 |
 MACROCELL | 0 | 17 | address_6502_8_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 0 | 16
-INPUTS | 7 | address_6502<5>  | aec  | data_7501<0>.PIN  | address_6502<4>  | address_6502<3>  | address_6502<2>  | data_6502<7>_BUFR.EXP
+INPUTS | 7 | address_6502<14>  | aec  | data_7501<0>.PIN  | address_6502<13>  | address_6502<5>  | address_6502<10>  | data_6502<7>_BUFR.EXP
 INPUTMC | 1 | 0 | 0
-INPUTP | 6 | 35 | 27 | 89 | 32 | 30 | 14
+INPUTP | 6 | 72 | 27 | 89 | 70 | 35 | 50
 EXPORTS | 1 | 0 | 16
 IMPORTS | 1 | 0 | 0
 EQ | 7 | 
    address_7501<8> = ;Imported pterms FB1_1
 	  address_6502<8>;
    address_7501<8>.OE = aec;
-    address_6502_8_IBUF$BUF0.EXP  =  address_6502<5> & data_7501<0>.PIN
-	# address_6502<4> & data_7501<0>.PIN
-	# address_6502<3> & data_7501<0>.PIN
-	# address_6502<2> & data_7501<0>.PIN
+    address_6502_8_IBUF$BUF0.EXP  =  address_6502<14> & data_7501<0>.PIN
+	# address_6502<13> & data_7501<0>.PIN
+	# address_6502<5> & data_7501<0>.PIN
+	# address_6502<10> & data_7501<0>.PIN
 
 MACROCELL | 2 | 8 | address_6502_9_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 2 | 9
-INPUTS | 21 | address_6502<9>  | aec  | r_w_6502  | data_7501<4>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | ddr_pio<4>  | address_6502<0>  | pio<4>.PIN
+INPUTS | 21 | address_6502<9>  | aec  | r_w_6502  | data_7501<4>.PIN  | ddr_pio<4>  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | pio<4>.PIN
 INPUTMC | 1 | 1 | 10
-INPUTP | 20 | 48 | 27 | 3 | 2 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 20 | 79
+INPUTP | 20 | 48 | 27 | 3 | 2 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 79
 EXPORTS | 1 | 2 | 9
 EQ | 15 | 
    address_7501<9> = address_6502<9>;
    address_7501<9>.OE = aec;
     address_6502_9_IBUF$BUF0.EXP  =  !r_w_6502 & data_7501<4>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<4> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<4>.PIN
+	# ddr_pio<4> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<4>.PIN
 
 MACROCELL | 1 | 5 | data_7501_0_IOBUFE$BUF0
 ATTRIBUTES | 265986 | 0
@@ -841,21 +852,12 @@ EQ | 2 |
 
 MACROCELL | 1 | 7 | r_w_6502_IBUF$BUF0
 ATTRIBUTES | 265986 | 0
-INPUTS | 3 | r_w_6502  | aec  | r_w_latched
+INPUTS | 2 | r_w_6502  | r_w_latched
 INPUTMC | 1 | 3 | 0
-INPUTP | 2 | 3 | 27
+INPUTP | 1 | 3
 EQ | 2 | 
    r_w_7501 = r_w_6502;
-   r_w_7501.OE = aec & !r_w_latched;
-
-MACROCELL | 3 | 0 | r_w_latched
-ATTRIBUTES | 8520480 | 0
-OUTPUTMC | 1 | 1 | 7
-INPUTS | 2 | aec  | gate_in
-INPUTP | 2 | 27 | 71
-EQ | 2 | 
-   r_w_latched.D = !aec;
-   r_w_latched.CLK = gate_in;
+   r_w_7501.OE = !r_w_latched;
 
 MACROCELL | 0 | 4 | _6_
 ATTRIBUTES | 265986 | 0
@@ -923,217 +925,217 @@ EQ | 2 |
 MACROCELL | 3 | 13 | $OpTx$DEC_data_6502<7>_BUFR_MC$1
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 0 | 9
-INPUTS | 19 | address_6502<9>  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<11>  | address_6502<10>  | address_6502<6>  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502<15>  | r_w_6502  | address_6502<0>  | pio<6>.PIN  | ddr_pio<6>
+INPUTS | 19 | r_w_6502  | address_6502<0>  | address_6502<14>  | address_6502<13>  | address_6502<12>  | address_6502<2>  | address_6502<1>  | address_6502<11>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502<7>  | address_6502<4>  | address_6502<15>  | pio<6>.PIN  | ddr_pio<6>
 INPUTMC | 1 | 1 | 8
-INPUTP | 18 | 48 | 46 | 43 | 72 | 70 | 67 | 53 | 50 | 37 | 35 | 32 | 30 | 14 | 16 | 74 | 3 | 20 | 73
+INPUTP | 18 | 3 | 20 | 72 | 70 | 67 | 14 | 16 | 53 | 48 | 46 | 30 | 37 | 35 | 50 | 43 | 32 | 74 | 73
 EQ | 12 | 
-   $OpTx$DEC_data_6502<7>_BUFR_MC$1 = !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<6> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<6>.PIN;
+   $OpTx$DEC_data_6502<7>_BUFR_MC$1 = ddr_pio<6> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<6>.PIN;
 
 MACROCELL | 0 | 2 | $OpTx$DEC_data_6502<7>_BUFR_MC$2
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 0 | 0
-INPUTS | 4 | data_7501<7>.PIN  | address_6502<4>  | address_6502<5>  | $OpTx$DEC_data_6502<7>_BUFR_MC$3
+INPUTS | 4 | data_7501<7>.PIN  | address_6502<14>  | address_6502<13>  | $OpTx$DEC_data_6502<7>_BUFR_MC$3
 INPUTMC | 1 | 0 | 9
-INPUTP | 3 | 9 | 32 | 35
+INPUTP | 3 | 9 | 72 | 70
 EQ | 3 | 
    $OpTx$DEC_data_6502<7>_BUFR_MC$2 = $OpTx$DEC_data_6502<7>_BUFR_MC$3
-	# address_6502<5> & data_7501<7>.PIN
-	# address_6502<4> & data_7501<7>.PIN;
+	# address_6502<14> & data_7501<7>.PIN
+	# address_6502<13> & data_7501<7>.PIN;
 
 MACROCELL | 0 | 9 | $OpTx$DEC_data_6502<7>_BUFR_MC$3
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 0 | 2 | 0 | 10
-INPUTS | 7 | $OpTx$DEC_data_6502<7>_BUFR_MC$1  | address_6502<10>  | data_7501<7>.PIN  | address_6502<11>  | address_6502<12>  | address_6502<2>  | EXP13_.EXP
+INPUTS | 7 | $OpTx$DEC_data_6502<7>_BUFR_MC$1  | address_6502<7>  | data_7501<7>.PIN  | address_6502<4>  | address_6502<15>  | address_6502<2>  | EXP13_.EXP
 INPUTMC | 2 | 3 | 13 | 0 | 8
-INPUTP | 5 | 50 | 9 | 53 | 67 | 14
+INPUTP | 5 | 43 | 9 | 32 | 74 | 14
 EXPORTS | 1 | 0 | 10
 IMPORTS | 1 | 0 | 8
 EQ | 16 | 
    $OpTx$DEC_data_6502<7>_BUFR_MC$3 = $OpTx$DEC_data_6502<7>_BUFR_MC$1
-	# address_6502<12> & data_7501<7>.PIN
-	# address_6502<11> & data_7501<7>.PIN
-	# address_6502<10> & data_7501<7>.PIN
-;Imported pterms FB1_9
-	# address_6502<9> & data_7501<7>.PIN
-	# address_6502<8> & data_7501<7>.PIN
 	# address_6502<7> & data_7501<7>.PIN
-	# address_6502<14> & data_7501<7>.PIN
-	# address_6502<13> & data_7501<7>.PIN
-;Imported pterms FB1_8
-	# address_6502<3> & data_7501<7>.PIN
+	# address_6502<4> & data_7501<7>.PIN
+	# address_6502<15> & data_7501<7>.PIN
+;Imported pterms FB1_9
 	# address_6502<2> & data_7501<7>.PIN
 	# address_6502<1> & data_7501<7>.PIN
-	# address_6502<15> & data_7501<7>.PIN;
+	# address_6502<9> & data_7501<7>.PIN
+	# address_6502<8> & data_7501<7>.PIN
+	# address_6502<3> & data_7501<7>.PIN
+;Imported pterms FB1_8
+	# address_6502<11> & data_7501<7>.PIN
+	# address_6502<6> & data_7501<7>.PIN
+	# address_6502<5> & data_7501<7>.PIN
+	# address_6502<10> & data_7501<7>.PIN;
     $OpTx$DEC_data_6502<7>_BUFR_MC$3.EXP  =  address_6502<2>
 
 MACROCELL | 0 | 8 | EXP13_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 9
-INPUTS | 7 | address_6502<9>  | data_7501<7>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<13>  | address_6502_4_IBUF$BUF0.EXP
+INPUTS | 7 | address_6502<2>  | data_7501<7>.PIN  | address_6502<1>  | address_6502<9>  | address_6502<8>  | address_6502<3>  | address_6502_4_IBUF$BUF0.EXP
 INPUTMC | 1 | 0 | 7
-INPUTP | 6 | 48 | 9 | 46 | 43 | 72 | 70
+INPUTP | 6 | 14 | 9 | 16 | 48 | 46 | 30
 EXPORTS | 1 | 0 | 9
 IMPORTS | 1 | 0 | 7
 EQ | 10 | 
-       EXP13_.EXP  =  address_6502<9> & data_7501<7>.PIN
-	# address_6502<8> & data_7501<7>.PIN
-	# address_6502<7> & data_7501<7>.PIN
-	# address_6502<14> & data_7501<7>.PIN
-	# address_6502<13> & data_7501<7>.PIN
-;Imported pterms FB1_8
-	# address_6502<3> & data_7501<7>.PIN
-	# address_6502<2> & data_7501<7>.PIN
+       EXP13_.EXP  =  address_6502<2> & data_7501<7>.PIN
 	# address_6502<1> & data_7501<7>.PIN
-	# address_6502<15> & data_7501<7>.PIN
+	# address_6502<9> & data_7501<7>.PIN
+	# address_6502<8> & data_7501<7>.PIN
+	# address_6502<3> & data_7501<7>.PIN
+;Imported pterms FB1_8
+	# address_6502<11> & data_7501<7>.PIN
+	# address_6502<6> & data_7501<7>.PIN
+	# address_6502<5> & data_7501<7>.PIN
+	# address_6502<10> & data_7501<7>.PIN
 
 MACROCELL | 0 | 11 | EXP14_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 12
-INPUTS | 7 | address_6502<5>  | data_7501<1>.PIN  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502<1>  | address_6502_2_IBUF$BUF0.EXP
+INPUTS | 7 | address_6502<14>  | data_7501<1>.PIN  | address_6502<13>  | address_6502<6>  | address_6502<5>  | address_6502<10>  | address_6502_2_IBUF$BUF0.EXP
 INPUTMC | 1 | 0 | 10
-INPUTP | 6 | 35 | 88 | 32 | 30 | 14 | 16
+INPUTP | 6 | 72 | 88 | 70 | 37 | 35 | 50
 EXPORTS | 1 | 0 | 12
 IMPORTS | 1 | 0 | 10
 EQ | 20 | 
-       EXP14_.EXP  =  address_6502<5> & data_7501<1>.PIN
-	# address_6502<4> & data_7501<1>.PIN
-	# address_6502<3> & data_7501<1>.PIN
-	# address_6502<2> & data_7501<1>.PIN
-	# address_6502<1> & data_7501<1>.PIN
-;Imported pterms FB1_11
+       EXP14_.EXP  =  address_6502<14> & data_7501<1>.PIN
+	# address_6502<13> & data_7501<1>.PIN
 	# address_6502<6> & data_7501<1>.PIN
+	# address_6502<5> & data_7501<1>.PIN
+	# address_6502<10> & data_7501<1>.PIN
+;Imported pterms FB1_11
 	# !r_w_6502 & data_7501<1>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<1> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<1>.PIN
+	# address_6502<12> & data_7501<1>.PIN
+	# ddr_pio<1> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<1>.PIN
 
 MACROCELL | 0 | 12 | EXP15_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 13
-INPUTS | 7 | address_6502<9>  | data_7501<1>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<14>  | address_6502<15>  | EXP14_.EXP
+INPUTS | 7 | address_6502<2>  | data_7501<1>.PIN  | address_6502<1>  | address_6502<11>  | address_6502<8>  | address_6502<3>  | EXP14_.EXP
 INPUTMC | 1 | 0 | 11
-INPUTP | 6 | 48 | 88 | 46 | 43 | 72 | 74
+INPUTP | 6 | 14 | 88 | 16 | 53 | 46 | 30
 EXPORTS | 1 | 0 | 13
 IMPORTS | 1 | 0 | 11
 EQ | 26 | 
-       EXP15_.EXP  =  address_6502<9> & data_7501<1>.PIN
-	# address_6502<8> & data_7501<1>.PIN
-	# address_6502<7> & data_7501<1>.PIN
-	# address_6502<14> & data_7501<1>.PIN
-	# address_6502<15> & data_7501<1>.PIN
-;Imported pterms FB1_12
-	# address_6502<5> & data_7501<1>.PIN
-	# address_6502<4> & data_7501<1>.PIN
-	# address_6502<3> & data_7501<1>.PIN
-	# address_6502<2> & data_7501<1>.PIN
+       EXP15_.EXP  =  address_6502<2> & data_7501<1>.PIN
 	# address_6502<1> & data_7501<1>.PIN
-;Imported pterms FB1_11
+	# address_6502<11> & data_7501<1>.PIN
+	# address_6502<8> & data_7501<1>.PIN
+	# address_6502<3> & data_7501<1>.PIN
+;Imported pterms FB1_12
+	# address_6502<14> & data_7501<1>.PIN
+	# address_6502<13> & data_7501<1>.PIN
 	# address_6502<6> & data_7501<1>.PIN
+	# address_6502<5> & data_7501<1>.PIN
+	# address_6502<10> & data_7501<1>.PIN
+;Imported pterms FB1_11
 	# !r_w_6502 & data_7501<1>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<1> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<1>.PIN
+	# address_6502<12> & data_7501<1>.PIN
+	# ddr_pio<1> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<1>.PIN
 
 MACROCELL | 0 | 15 | EXP16_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 16
-INPUTS | 7 | address_6502<9>  | data_7501<0>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<1>  | address_6502<15>  | ddr_pio<0>.EXP
+INPUTS | 7 | address_6502<2>  | data_7501<0>.PIN  | address_6502<1>  | address_6502<11>  | address_6502<3>  | address_6502<6>  | ddr_pio<0>.EXP
 INPUTMC | 1 | 0 | 14
-INPUTP | 6 | 48 | 89 | 46 | 43 | 16 | 74
+INPUTP | 6 | 14 | 89 | 16 | 53 | 30 | 37
 EXPORTS | 1 | 0 | 16
 IMPORTS | 1 | 0 | 14
 EQ | 20 | 
-       EXP16_.EXP  =  address_6502<9> & data_7501<0>.PIN
-	# address_6502<8> & data_7501<0>.PIN
-	# address_6502<7> & data_7501<0>.PIN
+       EXP16_.EXP  =  address_6502<2> & data_7501<0>.PIN
 	# address_6502<1> & data_7501<0>.PIN
-	# address_6502<15> & data_7501<0>.PIN
-;Imported pterms FB1_15
+	# address_6502<11> & data_7501<0>.PIN
+	# address_6502<3> & data_7501<0>.PIN
 	# address_6502<6> & data_7501<0>.PIN
+;Imported pterms FB1_15
 	# !r_w_6502 & data_7501<0>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<0> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<0>.PIN
+	# address_6502<12> & data_7501<0>.PIN
+	# ddr_pio<0> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<0>.PIN
 
 MACROCELL | 2 | 9 | EXP17_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 10
-INPUTS | 7 | address_6502<9>  | data_7501<4>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<1>  | address_6502<15>  | address_6502_9_IBUF$BUF0.EXP
+INPUTS | 7 | address_6502<2>  | data_7501<4>.PIN  | address_6502<1>  | address_6502<11>  | address_6502<3>  | address_6502<6>  | address_6502_9_IBUF$BUF0.EXP
 INPUTMC | 1 | 2 | 8
-INPUTP | 6 | 48 | 2 | 46 | 43 | 16 | 74
+INPUTP | 6 | 14 | 2 | 16 | 53 | 30 | 37
 EXPORTS | 1 | 2 | 10
 IMPORTS | 1 | 2 | 8
 EQ | 19 | 
-       EXP17_.EXP  =  address_6502<9> & data_7501<4>.PIN
-	# address_6502<8> & data_7501<4>.PIN
-	# address_6502<7> & data_7501<4>.PIN
+       EXP17_.EXP  =  address_6502<2> & data_7501<4>.PIN
 	# address_6502<1> & data_7501<4>.PIN
-	# address_6502<15> & data_7501<4>.PIN
+	# address_6502<11> & data_7501<4>.PIN
+	# address_6502<3> & data_7501<4>.PIN
+	# address_6502<6> & data_7501<4>.PIN
 ;Imported pterms FB3_9
 	# !r_w_6502 & data_7501<4>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<4> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<4>.PIN
+	# ddr_pio<4> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<4>.PIN
 
 MACROCELL | 2 | 11 | EXP18_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 10
-INPUTS | 6 | address_6502<6>  | data_7501<4>.PIN  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>
-INPUTP | 6 | 37 | 2 | 35 | 32 | 30 | 14
+INPUTS | 6 | address_6502<14>  | data_7501<4>.PIN  | address_6502<13>  | address_6502<12>  | address_6502<5>  | address_6502<10>
+INPUTP | 6 | 72 | 2 | 70 | 67 | 35 | 50
 EXPORTS | 1 | 2 | 10
 EQ | 5 | 
-       EXP18_.EXP  =  address_6502<6> & data_7501<4>.PIN
+       EXP18_.EXP  =  address_6502<14> & data_7501<4>.PIN
+	# address_6502<13> & data_7501<4>.PIN
+	# address_6502<12> & data_7501<4>.PIN
 	# address_6502<5> & data_7501<4>.PIN
-	# address_6502<4> & data_7501<4>.PIN
-	# address_6502<3> & data_7501<4>.PIN
-	# address_6502<2> & data_7501<4>.PIN
+	# address_6502<10> & data_7501<4>.PIN
 
 MACROCELL | 2 | 12 | EXP19_
 ATTRIBUTES | 2048 | 0
@@ -1147,32 +1149,32 @@ EQ | 1 |
 MACROCELL | 2 | 14 | EXP20_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 2 | 15
-INPUTS | 7 | address_6502<9>  | data_7501<2>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<1>  | address_6502<15>  | address_6502_12_IBUF$BUF0.EXP
+INPUTS | 7 | address_6502<2>  | data_7501<2>.PIN  | address_6502<1>  | address_6502<11>  | address_6502<3>  | address_6502<6>  | address_6502_12_IBUF$BUF0.EXP
 INPUTMC | 1 | 2 | 13
-INPUTP | 6 | 48 | 87 | 46 | 43 | 16 | 74
+INPUTP | 6 | 14 | 87 | 16 | 53 | 30 | 37
 EXPORTS | 1 | 2 | 15
 IMPORTS | 1 | 2 | 13
 EQ | 20 | 
-       EXP20_.EXP  =  address_6502<9> & data_7501<2>.PIN
-	# address_6502<8> & data_7501<2>.PIN
-	# address_6502<7> & data_7501<2>.PIN
+       EXP20_.EXP  =  address_6502<2> & data_7501<2>.PIN
 	# address_6502<1> & data_7501<2>.PIN
-	# address_6502<15> & data_7501<2>.PIN
-;Imported pterms FB3_14
+	# address_6502<11> & data_7501<2>.PIN
+	# address_6502<3> & data_7501<2>.PIN
 	# address_6502<6> & data_7501<2>.PIN
+;Imported pterms FB3_14
 	# !r_w_6502 & data_7501<2>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<2> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<2>.PIN
+	# address_6502<12> & data_7501<2>.PIN
+	# ddr_pio<2> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<2>.PIN
 
 MACROCELL | 2 | 17 | EXP21_
 ATTRIBUTES | 2048 | 0
@@ -1186,107 +1188,107 @@ EQ | 1 |
 MACROCELL | 3 | 4 | EXP22_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 3 | 5
-INPUTS | 7 | address_6502<9>  | data_7501<6>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<1>  | address_6502<15>  | ddr_pio<1>.EXP
+INPUTS | 7 | address_6502<2>  | data_7501<6>.PIN  | address_6502<1>  | address_6502<11>  | address_6502<3>  | address_6502<6>  | ddr_pio<1>.EXP
 INPUTMC | 1 | 3 | 3
-INPUTP | 6 | 48 | 7 | 46 | 43 | 16 | 74
+INPUTP | 6 | 14 | 7 | 16 | 53 | 30 | 37
 EXPORTS | 1 | 3 | 5
 IMPORTS | 1 | 3 | 3
 EQ | 19 | 
-       EXP22_.EXP  =  address_6502<9> & data_7501<6>.PIN
-	# address_6502<8> & data_7501<6>.PIN
-	# address_6502<7> & data_7501<6>.PIN
+       EXP22_.EXP  =  address_6502<2> & data_7501<6>.PIN
 	# address_6502<1> & data_7501<6>.PIN
-	# address_6502<15> & data_7501<6>.PIN
+	# address_6502<11> & data_7501<6>.PIN
+	# address_6502<3> & data_7501<6>.PIN
+	# address_6502<6> & data_7501<6>.PIN
 ;Imported pterms FB4_4
 	# !r_w_6502 & data_7501<6>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<5> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<5>.PIN
+	# ddr_pio<5> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<5>.PIN
 
 MACROCELL | 3 | 6 | EXP23_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 3 | 5
-INPUTS | 6 | address_6502<6>  | data_7501<6>.PIN  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>
-INPUTP | 6 | 37 | 7 | 35 | 32 | 30 | 14
+INPUTS | 6 | address_6502<14>  | data_7501<6>.PIN  | address_6502<13>  | address_6502<12>  | address_6502<5>  | address_6502<10>
+INPUTP | 6 | 72 | 7 | 70 | 67 | 35 | 50
 EXPORTS | 1 | 3 | 5
 EQ | 5 | 
-       EXP23_.EXP  =  address_6502<6> & data_7501<6>.PIN
+       EXP23_.EXP  =  address_6502<14> & data_7501<6>.PIN
+	# address_6502<13> & data_7501<6>.PIN
+	# address_6502<12> & data_7501<6>.PIN
 	# address_6502<5> & data_7501<6>.PIN
-	# address_6502<4> & data_7501<6>.PIN
-	# address_6502<3> & data_7501<6>.PIN
-	# address_6502<2> & data_7501<6>.PIN
+	# address_6502<10> & data_7501<6>.PIN
 
 MACROCELL | 3 | 7 | EXP24_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 3 | 8
-INPUTS | 6 | address_6502<9>  | data_7501<3>.PIN  | address_6502<8>  | address_6502<7>  | address_6502<1>  | address_6502<15>
-INPUTP | 6 | 48 | 1 | 46 | 43 | 16 | 74
+INPUTS | 6 | address_6502<2>  | data_7501<3>.PIN  | address_6502<1>  | address_6502<11>  | address_6502<3>  | address_6502<6>
+INPUTP | 6 | 14 | 1 | 16 | 53 | 30 | 37
 EXPORTS | 1 | 3 | 8
 EQ | 5 | 
-       EXP24_.EXP  =  address_6502<9> & data_7501<3>.PIN
-	# address_6502<8> & data_7501<3>.PIN
-	# address_6502<7> & data_7501<3>.PIN
+       EXP24_.EXP  =  address_6502<2> & data_7501<3>.PIN
 	# address_6502<1> & data_7501<3>.PIN
-	# address_6502<15> & data_7501<3>.PIN
+	# address_6502<11> & data_7501<3>.PIN
+	# address_6502<3> & data_7501<3>.PIN
+	# address_6502<6> & data_7501<3>.PIN
 
 MACROCELL | 3 | 9 | EXP25_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 3 | 8
-INPUTS | 7 | address_6502<6>  | data_7501<3>.PIN  | address_6502<5>  | address_6502<4>  | address_6502<3>  | address_6502<2>  | address_6502_15_IBUF$BUF0.EXP
+INPUTS | 7 | address_6502<14>  | data_7501<3>.PIN  | address_6502<13>  | address_6502<12>  | address_6502<5>  | address_6502<10>  | address_6502_15_IBUF$BUF0.EXP
 INPUTMC | 1 | 3 | 10
-INPUTP | 6 | 37 | 1 | 35 | 32 | 30 | 14
+INPUTP | 6 | 72 | 1 | 70 | 67 | 35 | 50
 EXPORTS | 1 | 3 | 8
 IMPORTS | 1 | 3 | 10
 EQ | 19 | 
-       EXP25_.EXP  =  address_6502<6> & data_7501<3>.PIN
+       EXP25_.EXP  =  address_6502<14> & data_7501<3>.PIN
+	# address_6502<13> & data_7501<3>.PIN
+	# address_6502<12> & data_7501<3>.PIN
 	# address_6502<5> & data_7501<3>.PIN
-	# address_6502<4> & data_7501<3>.PIN
-	# address_6502<3> & data_7501<3>.PIN
-	# address_6502<2> & data_7501<3>.PIN
+	# address_6502<10> & data_7501<3>.PIN
 ;Imported pterms FB4_11
 	# !r_w_6502 & data_7501<3>.PIN
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & ddr_pio<3> & r_w_6502 & !address_6502<0>
-	# !address_6502<9> & !address_6502<8> & 
-	!address_6502<7> & !address_6502<14> & !address_6502<13> & 
-	!address_6502<12> & !address_6502<11> & !address_6502<10> & 
-	!address_6502<6> & !address_6502<5> & !address_6502<4> & 
-	!address_6502<3> & !address_6502<2> & !address_6502<1> & 
-	!address_6502<15> & r_w_6502 & address_6502<0> & pio<3>.PIN
+	# ddr_pio<3> & r_w_6502 & !address_6502<0> & 
+	!address_6502<14> & !address_6502<13> & !address_6502<12> & 
+	!address_6502<2> & !address_6502<1> & !address_6502<11> & 
+	!address_6502<9> & !address_6502<8> & !address_6502<3> & 
+	!address_6502<6> & !address_6502<5> & !address_6502<10> & 
+	!address_6502<7> & !address_6502<4> & !address_6502<15>
+	# r_w_6502 & address_6502<0> & !address_6502<14> & 
+	!address_6502<13> & !address_6502<12> & !address_6502<2> & 
+	!address_6502<1> & !address_6502<11> & !address_6502<9> & 
+	!address_6502<8> & !address_6502<3> & !address_6502<6> & 
+	!address_6502<5> & !address_6502<10> & !address_6502<7> & 
+	!address_6502<4> & !address_6502<15> & pio<3>.PIN
 
-PIN | address_6502<9> | 64 | 0 | N/A | 48 | 27 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 8 | 2 | 8 | 3 | 13 | 0 | 10 | 2 | 13 | 3 | 10
-PIN | address_6502<8> | 64 | 0 | N/A | 46 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 8 | 0 | 10 | 3 | 13 | 0 | 0 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<7> | 64 | 0 | N/A | 43 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 8 | 2 | 7 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<14> | 64 | 0 | N/A | 72 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 12 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 8 | 3 | 2 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<13> | 64 | 0 | N/A | 70 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 8 | 2 | 13 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 17 | 3 | 10
-PIN | address_6502<12> | 64 | 0 | N/A | 67 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 9 | 2 | 12 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<11> | 64 | 0 | N/A | 53 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 9 | 2 | 5 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<10> | 64 | 0 | N/A | 50 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 9 | 2 | 3 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<6> | 64 | 0 | N/A | 37 | 25 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 3 | 13 | 0 | 10 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 11 | 0 | 0 | 2 | 4 | 3 | 9 | 3 | 10
-PIN | address_6502<5> | 64 | 0 | N/A | 35 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 2 | 0 | 5 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
-PIN | address_6502<4> | 64 | 0 | N/A | 32 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 2 | 0 | 6 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
-PIN | address_6502<3> | 64 | 0 | N/A | 30 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 7 | 0 | 3 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
-PIN | address_6502<2> | 64 | 0 | N/A | 14 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 7 | 0 | 9 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
-PIN | address_6502<1> | 64 | 0 | N/A | 16 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 11 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 7 | 0 | 6 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
-PIN | address_6502<15> | 64 | 0 | N/A | 74 | 27 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 7 | 3 | 10 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13
-PIN | _reset | 65536 | 0 | N/A | 92 | 14 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8
+PIN | _reset | 65536 | 0 | N/A | 92 | 15 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 3 | 0
 PIN | clock | 16384 | 0 | N/A | 24 | 14 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8
 PIN | r_w_6502 | 64 | 0 | N/A | 3 | 37 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 3 | 13 | 0 | 10 | 2 | 13 | 1 | 12 | 2 | 8 | 3 | 12 | 0 | 0 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 9 | 1 | 6 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 7 | 0 | 4 | 1 | 0 | 1 | 17 | 1 | 16 | 1 | 15 | 3 | 10
 PIN | address_6502<0> | 64 | 0 | N/A | 20 | 20 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 2 | 1 | 0 | 10 | 2 | 13 | 3 | 13 | 2 | 8 | 3 | 10
-PIN | aec | 64 | 0 | N/A | 27 | 34 | 3 | 16 | 1 | 12 | 1 | 15 | 1 | 16 | 0 | 4 | 1 | 17 | 1 | 0 | 3 | 12 | 2 | 1 | 2 | 3 | 2 | 5 | 2 | 13 | 2 | 16 | 3 | 2 | 3 | 10 | 0 | 6 | 0 | 10 | 0 | 3 | 0 | 7 | 0 | 5 | 2 | 4 | 2 | 7 | 0 | 17 | 2 | 8 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 9 | 1 | 6 | 1 | 11 | 1 | 13 | 1 | 14 | 1 | 7 | 3 | 0
+PIN | address_6502<10> | 64 | 0 | N/A | 50 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 7 | 2 | 3 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
+PIN | address_6502<11> | 64 | 0 | N/A | 53 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 7 | 2 | 5 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<12> | 64 | 0 | N/A | 67 | 25 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 3 | 13 | 0 | 10 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 11 | 0 | 0 | 2 | 12 | 3 | 9 | 3 | 10
+PIN | address_6502<13> | 64 | 0 | N/A | 70 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 17 | 0 | 2 | 2 | 11 | 3 | 13 | 0 | 17 | 2 | 16 | 3 | 9 | 3 | 10
+PIN | address_6502<14> | 64 | 0 | N/A | 72 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 2 | 3 | 2 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
+PIN | address_6502<15> | 64 | 0 | N/A | 74 | 27 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 9 | 3 | 10 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13
+PIN | address_6502<1> | 64 | 0 | N/A | 16 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 8 | 0 | 6 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<2> | 64 | 0 | N/A | 14 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 8 | 0 | 9 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<3> | 64 | 0 | N/A | 30 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 12 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 8 | 0 | 3 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<4> | 64 | 0 | N/A | 32 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 9 | 0 | 6 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<5> | 64 | 0 | N/A | 35 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 10 | 0 | 11 | 2 | 13 | 3 | 6 | 2 | 8 | 2 | 16 | 0 | 7 | 0 | 5 | 3 | 13 | 0 | 17 | 2 | 11 | 3 | 9 | 3 | 10
+PIN | address_6502<6> | 64 | 0 | N/A | 37 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 15 | 0 | 11 | 2 | 14 | 3 | 7 | 2 | 9 | 3 | 4 | 0 | 7 | 2 | 4 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<7> | 64 | 0 | N/A | 43 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 9 | 2 | 7 | 3 | 13 | 0 | 10 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<8> | 64 | 0 | N/A | 46 | 28 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 12 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 8 | 0 | 10 | 3 | 13 | 0 | 0 | 2 | 8 | 2 | 13 | 3 | 10
+PIN | address_6502<9> | 64 | 0 | N/A | 48 | 27 | 0 | 1 | 1 | 3 | 1 | 2 | 3 | 14 | 3 | 15 | 3 | 11 | 3 | 17 | 3 | 16 | 0 | 14 | 3 | 3 | 2 | 2 | 2 | 0 | 1 | 10 | 3 | 1 | 1 | 8 | 0 | 16 | 0 | 13 | 2 | 15 | 3 | 8 | 2 | 10 | 3 | 5 | 0 | 8 | 2 | 8 | 3 | 13 | 0 | 10 | 2 | 13 | 3 | 10
+PIN | aec | 64 | 0 | N/A | 27 | 33 | 3 | 16 | 1 | 12 | 1 | 15 | 1 | 16 | 0 | 4 | 1 | 17 | 1 | 0 | 3 | 12 | 3 | 0 | 2 | 1 | 2 | 3 | 2 | 5 | 2 | 13 | 2 | 16 | 3 | 2 | 3 | 10 | 0 | 6 | 0 | 10 | 0 | 3 | 0 | 7 | 0 | 5 | 2 | 4 | 2 | 7 | 0 | 17 | 2 | 8 | 1 | 5 | 1 | 4 | 1 | 1 | 1 | 9 | 1 | 6 | 1 | 11 | 1 | 13 | 1 | 14
 PIN | gate_in | 64 | 0 | N/A | 71 | 1 | 3 | 0
 PIN | address_7501<0> | 536871040 | 0 | N/A | 29
 PIN | address_7501<10> | 536871040 | 0 | N/A | 44

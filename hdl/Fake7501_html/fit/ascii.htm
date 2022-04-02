@@ -1,0 +1,1036 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: Fake7501                            Date: 12-21-2021,  4:22PM
+Device Used: XC9572XL-10-TQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+58 /72  ( 81%) 233 /360  ( 65%) 125/216 ( 58%)   15 /72  ( 21%) 61 /72  ( 85%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          14/18       30/54       74/90      16/18
+FB2          18/18*      34/54       38/90      18/18*
+FB3          12/18       26/54       56/90      14/18
+FB4          14/18       35/54       65/90      13/18
+             -----       -----       -----      -----    
+             58/72      125/216     233/360     61/72 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'clock' mapped onto global clock net GCK3.
+Global output enable net(s) unused.
+Signal '_reset' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   19          19    |  I/O              :    55      66
+Output        :   17          17    |  GCK/IO           :     3       3
+Bidirectional :   23          23    |  GTS/IO           :     2       2
+GCK           :    1           1    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total     61          61
+
+** Power Data **
+
+There are 58 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'Fake7501.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'address_6502<0>' based upon
+   the LOC constraint 'P22'. It is recommended that you declare this BUFG
+   explicitedly in your design. Note that for certain device families the output
+   of a BUFG constraint can not drive a gated clock, and the BUFG constraint
+   will be ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'clock' based upon the LOC
+   constraint 'P27'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal
+   'address_6502_0_IBUF' is ignored. Most likely the signal is gated and
+   therefore cannot be used as a global control signal.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB1,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<3> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB2,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<6> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB2,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<4> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB2,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<2> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB2,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<1> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB2,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<0> to allow all signals assigned to this function block to
+   be placed.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB4,
+   because too many function block product terms are required. Buffering output
+   signal data_6502<7> to allow all signals assigned to this function block to
+   be placed.
+*************************  Summary of Mapped Logic  ************************
+
+** 40 Outputs **
+
+Signal                            Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                              Pts   Inps          No.  Type    Use     Mode Rate State
+pio<0>                            3     19    FB1_2   13   I/O     I/O     STD  FAST RESET
+address_7501<3>                   2     2     FB1_4   20   I/O     O       STD  FAST 
+data_6502<3>                      2     3     FB1_5   14   I/O     I/O     STD  FAST 
+address_7501<5>                   2     2     FB1_6   15   I/O     O       STD  FAST 
+address_7501<1>                   2     2     FB1_7   25   I/O     O       STD  FAST 
+address_7501<4>                   2     2     FB1_8   17   I/O     O       STD  FAST 
+address_7501<2>                   2     2     FB1_11  23   GCK/I/O O       STD  FAST 
+address_7501<8>                   2     2     FB1_18  40   I/O     O       STD  FAST 
+data_6502<6>                      2     3     FB2_1   87   I/O     I/O     STD  FAST 
+data_7501<2>                      2     3     FB2_2   94   I/O     I/O     STD  FAST 
+pio<2>                            3     19    FB2_3   91   I/O     I/O     STD  FAST RESET
+pio<1>                            3     19    FB2_4   93   I/O     I/O     STD  FAST RESET
+data_7501<1>                      2     3     FB2_5   95   I/O     I/O     STD  FAST 
+data_7501<0>                      2     3     FB2_6   96   I/O     I/O     STD  FAST 
+data_7501<4>                      2     3     FB2_7   3    GTS/I/O I/O     STD  FAST 
+r_w_7501                          2     2     FB2_8   97   I/O     O       STD  FAST 
+data_7501<3>                      2     3     FB2_10  1    I/O     I/O     STD  FAST 
+data_7501<5>                      2     3     FB2_12  6    I/O     I/O     STD  FAST 
+data_6502<0>                      2     3     FB2_13  8    I/O     I/O     STD  FAST 
+data_7501<6>                      2     3     FB2_14  9    I/O     I/O     STD  FAST 
+data_7501<7>                      2     3     FB2_15  11   I/O     I/O     STD  FAST 
+data_6502<1>                      2     3     FB2_16  10   I/O     I/O     STD  FAST 
+data_6502<2>                      2     3     FB2_17  12   I/O     I/O     STD  FAST 
+data_6502<4>                      2     3     FB2_18  92   I/O     I/O     STD  FAST 
+address_7501<0>                   2     2     FB3_2   32   I/O     O       STD  FAST 
+address_7501<10>                  2     2     FB3_4   50   I/O     O       STD  FAST 
+address_7501<6>                   2     2     FB3_5   35   I/O     O       STD  FAST 
+address_7501<11>                  2     2     FB3_6   53   I/O     O       STD  FAST 
+address_7501<7>                   2     2     FB3_8   37   I/O     O       STD  FAST 
+address_7501<9>                   2     2     FB3_9   42   I/O     O       STD  FAST 
+address_7501<12>                  2     2     FB3_14  55   I/O     O       STD  FAST 
+address_7501<13>                  2     2     FB3_17  58   I/O     O       STD  FAST 
+address_7501<14>                  2     2     FB4_3   71   I/O     O       STD  FAST 
+address_7501<15>                  2     2     FB4_11  74   I/O     O       STD  FAST 
+pio<5>                            3     19    FB4_12  82   I/O     I/O     STD  FAST RESET
+data_6502<7>                      2     3     FB4_13  85   I/O     I/O     STD  FAST 
+pio<3>                            3     19    FB4_15  89   I/O     I/O     STD  FAST RESET
+pio<4>                            3     19    FB4_16  86   I/O     I/O     STD  FAST RESET
+data_6502<5>                      3     18    FB4_17  90   I/O     I/O     STD  FAST 
+pio<6>                            3     19    FB4_18  79   I/O     I/O     STD  FAST RESET
+
+** 18 Buried Nodes **
+
+Signal                            Total Total Loc     Pwr  Reg Init
+Name                              Pts   Inps          Mode State
+data_6502<7>_BUFR                 3     4     FB1_1   STD  
+$OpTx$DEC_data_6502<7>_BUFR_MC$2  3     4     FB1_3   STD  
+$OpTx$DEC_data_6502<7>_BUFR_MC$3  13    14    FB1_10  STD  
+data_6502<1>_BUFR                 18    20    FB1_14  STD  
+ddr_pio<0>                        2     18    FB1_15  STD  RESET
+data_6502<0>_BUFR                 18    20    FB1_17  STD  
+ddr_pio<6>                        2     18    FB2_9   STD  RESET
+ddr_pio<4>                        2     18    FB2_11  STD  RESET
+ddr_pio<3>                        2     18    FB3_1   STD  RESET
+ddr_pio<2>                        2     18    FB3_3   STD  RESET
+data_6502<4>_BUFR                 18    20    FB3_11  STD  
+data_6502<2>_BUFR                 18    20    FB3_16  STD  
+r_w_latched                       2     2     FB4_1   STD  RESET
+ddr_pio<5>                        2     18    FB4_2   STD  RESET
+ddr_pio<1>                        2     18    FB4_4   STD  RESET
+data_6502<6>_BUFR                 18    20    FB4_6   STD  
+data_6502<3>_BUFR                 18    20    FB4_9   STD  
+$OpTx$DEC_data_6502<7>_BUFR_MC$1  2     19    FB4_14  STD  
+
+** 21 Inputs **
+
+Signal                            Loc     Pin  Pin     Pin     
+Name                                      No.  Type    Use     
+address_6502<2>                   FB1_1   16   I/O     I
+address_6502<1>                   FB1_3   18   I/O     I
+address_6502<0>                   FB1_9   22   GCK/I/O I
+address_6502<3>                   FB1_12  33   I/O     I
+address_6502<4>                   FB1_13  36   I/O     I
+clock                             FB1_14  27   GCK/I/O GCK
+address_6502<5>                   FB1_16  39   I/O     I
+aec                               FB1_17  30   I/O     I
+_reset                            FB2_9   99   GSR/I/O GSR
+r_w_6502                          FB2_11  4    GTS/I/O I
+address_6502<6>                   FB3_1   41   I/O     I
+address_6502<7>                   FB3_3   49   I/O     I
+address_6502<9>                   FB3_7   54   I/O     I
+address_6502<8>                   FB3_11  52   I/O     I
+address_6502<10>                  FB3_15  56   I/O     I
+address_6502<11>                  FB3_18  59   I/O     I
+address_6502<12>                  FB4_4   72   I/O     I
+address_6502<13>                  FB4_6   76   I/O     I
+gate_in                           FB4_7   77   I/O     I
+address_6502<15>                  FB4_10  81   I/O     I
+address_6502<14>                  FB4_14  78   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               30/24
+Number of signals used by logic mapping into function block:  30
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+data_6502<7>_BUFR     3       0   /\1   1     FB1_1   16    I/O     I
+pio<0>                3       0     0   2     FB1_2   13    I/O     I/O
+$OpTx$DEC_data_6502<7>_BUFR_MC$2
+                      3       0     0   2     FB1_3   18    I/O     I
+address_7501<3>       2       0     0   3     FB1_4   20    I/O     O
+data_6502<3>          2       0     0   3     FB1_5   14    I/O     I/O
+address_7501<5>       2       0     0   3     FB1_6   15    I/O     O
+address_7501<1>       2       0   \/1   2     FB1_7   25    I/O     O
+address_7501<4>       2       1<- \/4   0     FB1_8   17    I/O     O
+(unused)              0       0   \/5   0     FB1_9   22    GCK/I/O I
+$OpTx$DEC_data_6502<7>_BUFR_MC$3
+                     13       9<- \/1   0     FB1_10  28    I/O     (b)
+address_7501<2>       2       1<- \/4   0     FB1_11  23    GCK/I/O O
+(unused)              0       0   \/5   0     FB1_12  33    I/O     I
+(unused)              0       0   \/5   0     FB1_13  36    I/O     I
+data_6502<1>_BUFR    18      14<- \/1   0     FB1_14  27    GCK/I/O GCK
+ddr_pio<0>            2       1<- \/4   0     FB1_15  29    I/O     (b)
+(unused)              0       0   \/5   0     FB1_16  39    I/O     I
+data_6502<0>_BUFR    18      13<-   0   0     FB1_17  30    I/O     I
+address_7501<8>       2       1<- /\4   0     FB1_18  40    I/O     O
+
+Signals Used by Logic in Function Block
+  1: $OpTx$DEC_data_6502<7>_BUFR_MC$1  11: address_6502<11>  21: address_6502<6> 
+  2: $OpTx$DEC_data_6502<7>_BUFR_MC$2  12: address_6502<12>  22: address_6502<7> 
+  3: $OpTx$DEC_data_6502<7>_BUFR_MC$3  13: address_6502<13>  23: address_6502<8> 
+  4: pio<1>.PIN                        14: address_6502<14>  24: address_6502<9> 
+  5: pio<0>.PIN                        15: address_6502<15>  25: aec 
+  6: data_7501<7>.PIN                  16: address_6502<1>   26: data_6502<3>_BUFR 
+  7: data_7501<1>.PIN                  17: address_6502<2>   27: data_6502<0>.PIN 
+  8: data_7501<0>.PIN                  18: address_6502<3>   28: ddr_pio<0> 
+  9: address_6502<0>                   19: address_6502<4>   29: ddr_pio<1> 
+ 10: address_6502<10>                  20: address_6502<5>   30: r_w_6502 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+data_6502<7>_BUFR    .X...X.....X.................X.......... 4
+pio<0>               ........XXXXXXXXXXXXXXXX..XX.X.......... 19
+$OpTx$DEC_data_6502<7>_BUFR_MC$2 
+                     ..X..X......XX.......................... 4
+address_7501<3>      .................X......X............... 2
+data_6502<3>         ........................XX...X.......... 3
+address_7501<5>      ...................X....X............... 2
+address_7501<1>      ...............X........X............... 2
+address_7501<4>      ..................X.....X............... 2
+$OpTx$DEC_data_6502<7>_BUFR_MC$3 
+                     X....X...XX...XXXXXXXXXX................ 14
+address_7501<2>      ................X.......X............... 2
+data_6502<1>_BUFR    ...X..X.XXXXXXXXXXXXXXXX....XX.......... 20
+ddr_pio<0>           ........XXXXXXXXXXXXXXXX..X..X.......... 18
+data_6502<0>_BUFR    ....X..XXXXXXXXXXXXXXXXX...X.X.......... 20
+address_7501<8>      ......................X.X............... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               34/20
+Number of signals used by logic mapping into function block:  34
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+data_6502<6>          2       0     0   3     FB2_1   87    I/O     I/O
+data_7501<2>          2       0     0   3     FB2_2   94    I/O     I/O
+pio<2>                3       0     0   2     FB2_3   91    I/O     I/O
+pio<1>                3       0     0   2     FB2_4   93    I/O     I/O
+data_7501<1>          2       0     0   3     FB2_5   95    I/O     I/O
+data_7501<0>          2       0     0   3     FB2_6   96    I/O     I/O
+data_7501<4>          2       0     0   3     FB2_7   3     GTS/I/O I/O
+r_w_7501              2       0     0   3     FB2_8   97    I/O     O
+ddr_pio<6>            2       0     0   3     FB2_9   99    GSR/I/O GSR
+data_7501<3>          2       0     0   3     FB2_10  1     I/O     I/O
+ddr_pio<4>            2       0     0   3     FB2_11  4     GTS/I/O I
+data_7501<5>          2       0     0   3     FB2_12  6     I/O     I/O
+data_6502<0>          2       0     0   3     FB2_13  8     I/O     I/O
+data_7501<6>          2       0     0   3     FB2_14  9     I/O     I/O
+data_7501<7>          2       0     0   3     FB2_15  11    I/O     I/O
+data_6502<1>          2       0     0   3     FB2_16  10    I/O     I/O
+data_6502<2>          2       0     0   3     FB2_17  12    I/O     I/O
+data_6502<4>          2       0     0   3     FB2_18  92    I/O     I/O
+
+Signals Used by Logic in Function Block
+  1: address_6502<0>   13: address_6502<6>    24: data_6502<1>.PIN 
+  2: address_6502<10>  14: address_6502<7>    25: data_6502<2>.PIN 
+  3: address_6502<11>  15: address_6502<8>    26: data_6502<3>.PIN 
+  4: address_6502<12>  16: address_6502<9>    27: data_6502<4>.PIN 
+  5: address_6502<13>  17: aec                28: data_6502<5>.PIN 
+  6: address_6502<14>  18: data_6502<0>_BUFR  29: data_6502<6>.PIN 
+  7: address_6502<15>  19: data_6502<1>_BUFR  30: data_6502<7>.PIN 
+  8: address_6502<1>   20: data_6502<2>_BUFR  31: ddr_pio<1> 
+  9: address_6502<2>   21: data_6502<4>_BUFR  32: ddr_pio<2> 
+ 10: address_6502<3>   22: data_6502<6>_BUFR  33: r_w_6502 
+ 11: address_6502<4>   23: data_6502<0>.PIN   34: r_w_latched 
+ 12: address_6502<5>  
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+data_6502<6>         ................X....X..........X....... 3
+data_7501<2>         ................X.......X.......X....... 3
+pio<2>               XXXXXXXXXXXXXXXX........X......XX....... 19
+pio<1>               XXXXXXXXXXXXXXXX.......X......X.X....... 19
+data_7501<1>         ................X......X........X....... 3
+data_7501<0>         ................X.....X.........X....... 3
+data_7501<4>         ................X.........X.....X....... 3
+r_w_7501             ................................XX...... 2
+ddr_pio<6>           XXXXXXXXXXXXXXXX.............X..X....... 18
+data_7501<3>         ................X........X......X....... 3
+ddr_pio<4>           XXXXXXXXXXXXXXXX..........X.....X....... 18
+data_7501<5>         ................X..........X....X....... 3
+data_6502<0>         ................XX..............X....... 3
+data_7501<6>         ................X...........X...X....... 3
+data_7501<7>         ................X............X..X....... 3
+data_6502<1>         ................X.X.............X....... 3
+data_6502<2>         ................X..X............X....... 3
+data_6502<4>         ................X...X...........X....... 3
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               26/28
+Number of signals used by logic mapping into function block:  26
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+ddr_pio<3>            2       0     0   3     FB3_1   41    I/O     I
+address_7501<0>       2       0     0   3     FB3_2   32    I/O     O
+ddr_pio<2>            2       0     0   3     FB3_3   49    I/O     I
+address_7501<10>      2       0     0   3     FB3_4   50    I/O     O
+address_7501<6>       2       0     0   3     FB3_5   35    I/O     O
+address_7501<11>      2       0     0   3     FB3_6   53    I/O     O
+(unused)              0       0     0   5     FB3_7   54    I/O     I
+address_7501<7>       2       0     0   3     FB3_8   37    I/O     O
+address_7501<9>       2       0   \/3   0     FB3_9   42    I/O     O
+(unused)              0       0   \/5   0     FB3_10  60    I/O     (b)
+data_6502<4>_BUFR    18      13<-   0   0     FB3_11  52    I/O     I
+(unused)              0       0   /\5   0     FB3_12  61    I/O     (b)
+(unused)              0       0   \/1   4     FB3_13  63    I/O     (b)
+address_7501<12>      2       1<- \/4   0     FB3_14  55    I/O     O
+(unused)              0       0   \/5   0     FB3_15  56    I/O     I
+data_6502<2>_BUFR    18      13<-   0   0     FB3_16  64    I/O     (b)
+address_7501<13>      2       1<- /\4   0     FB3_17  58    I/O     O
+(unused)              0       0   /\1   4     FB3_18  59    I/O     I
+
+Signals Used by Logic in Function Block
+  1: pio<4>.PIN        10: address_6502<14>  19: address_6502<8> 
+  2: pio<2>.PIN        11: address_6502<15>  20: address_6502<9> 
+  3: data_7501<4>.PIN  12: address_6502<1>   21: aec 
+  4: data_7501<2>.PIN  13: address_6502<2>   22: data_6502<2>.PIN 
+  5: address_6502<0>   14: address_6502<3>   23: data_6502<3>.PIN 
+  6: address_6502<10>  15: address_6502<4>   24: ddr_pio<2> 
+  7: address_6502<11>  16: address_6502<5>   25: ddr_pio<4> 
+  8: address_6502<12>  17: address_6502<6>   26: r_w_6502 
+  9: address_6502<13>  18: address_6502<7>  
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+ddr_pio<3>           ....XXXXXXXXXXXXXXXX..X..X.............. 18
+address_7501<0>      ....X...............X................... 2
+ddr_pio<2>           ....XXXXXXXXXXXXXXXX.X...X.............. 18
+address_7501<10>     .....X..............X................... 2
+address_7501<6>      ................X...X................... 2
+address_7501<11>     ......X.............X................... 2
+address_7501<7>      .................X..X................... 2
+address_7501<9>      ...................XX................... 2
+data_6502<4>_BUFR    X.X.XXXXXXXXXXXXXXXX....XX.............. 20
+address_7501<12>     .......X............X................... 2
+data_6502<2>_BUFR    .X.XXXXXXXXXXXXXXXXX...X.X.............. 20
+address_7501<13>     ........X...........X................... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               35/19
+Number of signals used by logic mapping into function block:  35
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+r_w_latched           2       0     0   3     FB4_1   65    I/O     (b)
+ddr_pio<5>            2       0     0   3     FB4_2   67    I/O     (b)
+address_7501<14>      2       0     0   3     FB4_3   71    I/O     O
+ddr_pio<1>            2       0   \/3   0     FB4_4   72    I/O     I
+(unused)              0       0   \/5   0     FB4_5   68    I/O     (b)
+data_6502<6>_BUFR    18      13<-   0   0     FB4_6   76    I/O     I
+(unused)              0       0   /\5   0     FB4_7   77    I/O     I
+(unused)              0       0   \/5   0     FB4_8   70    I/O     (b)
+data_6502<3>_BUFR    18      13<-   0   0     FB4_9   66    I/O     (b)
+(unused)              0       0   /\5   0     FB4_10  81    I/O     I
+address_7501<15>      2       0   /\3   0     FB4_11  74    I/O     O
+pio<5>                3       0     0   2     FB4_12  82    I/O     I/O
+data_6502<7>          2       0     0   3     FB4_13  85    I/O     I/O
+$OpTx$DEC_data_6502<7>_BUFR_MC$1
+                      2       0     0   3     FB4_14  78    I/O     I
+pio<3>                3       0     0   2     FB4_15  89    I/O     I/O
+pio<4>                3       0     0   2     FB4_16  86    I/O     I/O
+data_6502<5>          3       0     0   2     FB4_17  90    I/O     I/O
+pio<6>                3       0     0   2     FB4_18  79    I/O     I/O
+
+Signals Used by Logic in Function Block
+  1: pio<3>.PIN        13: address_6502<15>   25: data_6502<1>.PIN 
+  2: data_7501<6>.PIN  14: address_6502<1>    26: data_6502<3>.PIN 
+  3: data_7501<5>.PIN  15: address_6502<2>    27: data_6502<4>.PIN 
+  4: data_7501<3>.PIN  16: address_6502<3>    28: data_6502<6>.PIN 
+  5: pio<6>.PIN        17: address_6502<4>    29: data_6502<7>.PIN 
+  6: pio<5>.PIN        18: address_6502<5>    30: ddr_pio<3> 
+  7: address_6502<0>   19: address_6502<6>    31: ddr_pio<4> 
+  8: address_6502<10>  20: address_6502<7>    32: ddr_pio<5> 
+  9: address_6502<11>  21: address_6502<8>    33: ddr_pio<6> 
+ 10: address_6502<12>  22: address_6502<9>    34: gate_in 
+ 11: address_6502<13>  23: aec                35: r_w_6502 
+ 12: address_6502<14>  24: data_6502<7>_BUFR 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+r_w_latched          ......................X..........X...... 2
+ddr_pio<5>           ......XXXXXXXXXXXXXXXX.....X......X..... 18
+address_7501<14>     ...........X..........X................. 2
+ddr_pio<1>           ......XXXXXXXXXXXXXXXX..X.........X..... 18
+data_6502<6>_BUFR    .X...XXXXXXXXXXXXXXXXX.........X..X..... 20
+data_6502<3>_BUFR    X..X..XXXXXXXXXXXXXXXX.......X....X..... 20
+address_7501<15>     ............X.........X................. 2
+pio<5>               ......XXXXXXXXXXXXXXXX.....X...X..X..... 19
+data_6502<7>         ......................XX..........X..... 3
+$OpTx$DEC_data_6502<7>_BUFR_MC$1 
+                     ....X.XXXXXXXXXXXXXXXX..........X.X..... 19
+pio<3>               ......XXXXXXXXXXXXXXXX...X...X....X..... 19
+pio<4>               ......XXXXXXXXXXXXXXXX....X...X...X..... 19
+data_6502<5>         ..X....XXXXXXXXXXXXXXXX...........X..... 18
+pio<6>               ......XXXXXXXXXXXXXXXX......X...X.X..... 19
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+$OpTx$DEC_data_6502(7)_BUFR_MC$2 <= (($OpTx$DEC_data_6502(7)_BUFR_MC$3)
+	OR (address_6502(14) AND data_7501(7).PIN)
+	OR (address_6502(13) AND data_7501(7).PIN));
+
+
+$OpTx$DEC_data_6502(7)_BUFR_MC$3 <= (($OpTx$DEC_data_6502(7)_BUFR_MC$1)
+	OR (address_6502_4_IBUF$BUF0.EXP)
+	OR (address_6502(2) AND data_7501(7).PIN)
+	OR (address_6502(1) AND data_7501(7).PIN)
+	OR (address_6502(9) AND data_7501(7).PIN)
+	OR (address_6502(8) AND data_7501(7).PIN)
+	OR (address_6502(3) AND data_7501(7).PIN)
+	OR (address_6502(7) AND data_7501(7).PIN)
+	OR (address_6502(4) AND data_7501(7).PIN)
+	OR (address_6502(15) AND data_7501(7).PIN));
+
+
+$OpTx$DEC_data_6502(7)_BUFR_MC$1 <= ((ddr_pio(6) AND r_w_6502 AND NOT address_6502(0) AND 
+	NOT address_6502(14) AND NOT address_6502(13) AND NOT address_6502(12) AND 
+	NOT address_6502(2) AND NOT address_6502(1) AND NOT address_6502(11) AND 
+	NOT address_6502(9) AND NOT address_6502(8) AND NOT address_6502(3) AND 
+	NOT address_6502(6) AND NOT address_6502(5) AND NOT address_6502(10) AND 
+	NOT address_6502(7) AND NOT address_6502(4) AND NOT address_6502(15))
+	OR (r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15) AND pio(6).PIN));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+address_7501_I(0) <= address_6502(0);
+address_7501(0) <= address_7501_I(0) when address_7501_OE(0) = '1' else 'Z';
+address_7501_OE(0) <= aec;
+
+
+address_7501_I(1) <= address_6502(1);
+address_7501(1) <= address_7501_I(1) when address_7501_OE(1) = '1' else 'Z';
+address_7501_OE(1) <= aec;
+
+
+address_7501_I(2) <= address_6502(2);
+address_7501(2) <= address_7501_I(2) when address_7501_OE(2) = '1' else 'Z';
+address_7501_OE(2) <= aec;
+
+
+address_7501_I(3) <= address_6502(3);
+address_7501(3) <= address_7501_I(3) when address_7501_OE(3) = '1' else 'Z';
+address_7501_OE(3) <= aec;
+
+
+address_7501_I(4) <= address_6502(4);
+address_7501(4) <= address_7501_I(4) when address_7501_OE(4) = '1' else 'Z';
+address_7501_OE(4) <= aec;
+
+
+address_7501_I(5) <= address_6502(5);
+address_7501(5) <= address_7501_I(5) when address_7501_OE(5) = '1' else 'Z';
+address_7501_OE(5) <= aec;
+
+
+address_7501_I(6) <= address_6502(6);
+address_7501(6) <= address_7501_I(6) when address_7501_OE(6) = '1' else 'Z';
+address_7501_OE(6) <= aec;
+
+
+address_7501_I(7) <= address_6502(7);
+address_7501(7) <= address_7501_I(7) when address_7501_OE(7) = '1' else 'Z';
+address_7501_OE(7) <= aec;
+
+
+address_7501_I(8) <= address_6502(8);
+address_7501(8) <= address_7501_I(8) when address_7501_OE(8) = '1' else 'Z';
+address_7501_OE(8) <= aec;
+
+
+address_7501_I(9) <= address_6502(9);
+address_7501(9) <= address_7501_I(9) when address_7501_OE(9) = '1' else 'Z';
+address_7501_OE(9) <= aec;
+
+
+address_7501_I(10) <= address_6502(10);
+address_7501(10) <= address_7501_I(10) when address_7501_OE(10) = '1' else 'Z';
+address_7501_OE(10) <= aec;
+
+
+address_7501_I(11) <= address_6502(11);
+address_7501(11) <= address_7501_I(11) when address_7501_OE(11) = '1' else 'Z';
+address_7501_OE(11) <= aec;
+
+
+address_7501_I(12) <= address_6502(12);
+address_7501(12) <= address_7501_I(12) when address_7501_OE(12) = '1' else 'Z';
+address_7501_OE(12) <= aec;
+
+
+address_7501_I(13) <= address_6502(13);
+address_7501(13) <= address_7501_I(13) when address_7501_OE(13) = '1' else 'Z';
+address_7501_OE(13) <= aec;
+
+
+address_7501_I(14) <= address_6502(14);
+address_7501(14) <= address_7501_I(14) when address_7501_OE(14) = '1' else 'Z';
+address_7501_OE(14) <= aec;
+
+
+address_7501_I(15) <= address_6502(15);
+address_7501(15) <= address_7501_I(15) when address_7501_OE(15) = '1' else 'Z';
+address_7501_OE(15) <= aec;
+
+
+data_6502_I(0) <= data_6502(0)_BUFR;
+data_6502(0) <= data_6502_I(0) when data_6502_OE(0) = '1' else 'Z';
+data_6502_OE(0) <= (r_w_6502 AND aec);
+
+
+data_6502(0)_BUFR <= ((ddr_pio(0).EXP)
+	OR (address_6502(2) AND data_7501(0).PIN)
+	OR (address_6502(1) AND data_7501(0).PIN)
+	OR (address_6502(11) AND data_7501(0).PIN)
+	OR (address_6502(3) AND data_7501(0).PIN)
+	OR (address_6502(6) AND data_7501(0).PIN)
+	OR (address_6502(14) AND data_7501(0).PIN)
+	OR (address_6502(13) AND data_7501(0).PIN)
+	OR (address_6502(5) AND data_7501(0).PIN)
+	OR (address_6502(10) AND data_7501(0).PIN)
+	OR (address_6502(9) AND data_7501(0).PIN)
+	OR (address_6502(8) AND data_7501(0).PIN)
+	OR (address_6502(7) AND data_7501(0).PIN)
+	OR (address_6502(4) AND data_7501(0).PIN)
+	OR (address_6502(15) AND data_7501(0).PIN));
+
+
+data_6502_I(1) <= data_6502(1)_BUFR;
+data_6502(1) <= data_6502_I(1) when data_6502_OE(1) = '1' else 'Z';
+data_6502_OE(1) <= (r_w_6502 AND aec);
+
+
+data_6502(1)_BUFR <= ((EXP14_.EXP)
+	OR (address_6502(2) AND data_7501(1).PIN)
+	OR (address_6502(1) AND data_7501(1).PIN)
+	OR (address_6502(11) AND data_7501(1).PIN)
+	OR (address_6502(8) AND data_7501(1).PIN)
+	OR (address_6502(3) AND data_7501(1).PIN)
+	OR (address_6502(9) AND data_7501(1).PIN)
+	OR (address_6502(7) AND data_7501(1).PIN)
+	OR (address_6502(4) AND data_7501(1).PIN)
+	OR (address_6502(15) AND data_7501(1).PIN));
+
+
+data_6502(2)_BUFR <= ((address_6502_12_IBUF$BUF0.EXP)
+	OR (address_6502(2) AND data_7501(2).PIN)
+	OR (address_6502(1) AND data_7501(2).PIN)
+	OR (address_6502(11) AND data_7501(2).PIN)
+	OR (address_6502(3) AND data_7501(2).PIN)
+	OR (address_6502(6) AND data_7501(2).PIN)
+	OR (address_6502(14) AND data_7501(2).PIN)
+	OR (address_6502(13) AND data_7501(2).PIN)
+	OR (address_6502(5) AND data_7501(2).PIN)
+	OR (address_6502(10) AND data_7501(2).PIN)
+	OR (address_6502(9) AND data_7501(2).PIN)
+	OR (address_6502(8) AND data_7501(2).PIN)
+	OR (address_6502(7) AND data_7501(2).PIN)
+	OR (address_6502(4) AND data_7501(2).PIN)
+	OR (address_6502(15) AND data_7501(2).PIN));
+
+
+data_6502_I(2) <= data_6502(2)_BUFR;
+data_6502(2) <= data_6502_I(2) when data_6502_OE(2) = '1' else 'Z';
+data_6502_OE(2) <= (r_w_6502 AND aec);
+
+
+data_6502_I(3) <= data_6502(3)_BUFR;
+data_6502(3) <= data_6502_I(3) when data_6502_OE(3) = '1' else 'Z';
+data_6502_OE(3) <= (r_w_6502 AND aec);
+
+
+data_6502(3)_BUFR <= ((address_6502(2) AND data_7501(3).PIN)
+	OR (address_6502(1) AND data_7501(3).PIN)
+	OR (address_6502(11) AND data_7501(3).PIN)
+	OR (address_6502(3) AND data_7501(3).PIN)
+	OR (address_6502(6) AND data_7501(3).PIN)
+	OR (address_6502_15_IBUF$BUF0.EXP)
+	OR (address_6502(14) AND data_7501(3).PIN)
+	OR (address_6502(13) AND data_7501(3).PIN)
+	OR (address_6502(12) AND data_7501(3).PIN)
+	OR (address_6502(5) AND data_7501(3).PIN)
+	OR (address_6502(10) AND data_7501(3).PIN)
+	OR (address_6502(9) AND data_7501(3).PIN)
+	OR (address_6502(8) AND data_7501(3).PIN)
+	OR (address_6502(7) AND data_7501(3).PIN)
+	OR (address_6502(4) AND data_7501(3).PIN)
+	OR (address_6502(15) AND data_7501(3).PIN));
+
+
+data_6502_I(4) <= data_6502(4)_BUFR;
+data_6502(4) <= data_6502_I(4) when data_6502_OE(4) = '1' else 'Z';
+data_6502_OE(4) <= (r_w_6502 AND aec);
+
+
+data_6502(4)_BUFR <= ((address_6502_9_IBUF$BUF0.EXP)
+	OR (address_6502(2) AND data_7501(4).PIN)
+	OR (address_6502(1) AND data_7501(4).PIN)
+	OR (address_6502(11) AND data_7501(4).PIN)
+	OR (address_6502(3) AND data_7501(4).PIN)
+	OR (address_6502(6) AND data_7501(4).PIN)
+	OR (address_6502(14) AND data_7501(4).PIN)
+	OR (address_6502(13) AND data_7501(4).PIN)
+	OR (address_6502(12) AND data_7501(4).PIN)
+	OR (address_6502(5) AND data_7501(4).PIN)
+	OR (address_6502(10) AND data_7501(4).PIN)
+	OR (address_6502(9) AND data_7501(4).PIN)
+	OR (address_6502(8) AND data_7501(4).PIN)
+	OR (address_6502(7) AND data_7501(4).PIN)
+	OR (address_6502(4) AND data_7501(4).PIN)
+	OR (address_6502(15) AND data_7501(4).PIN));
+
+
+data_6502_I(5) <= NOT (((NOT data_7501(5).PIN)
+	OR (r_w_6502 AND NOT address_6502(14) AND NOT address_6502(13) AND 
+	NOT address_6502(12) AND NOT address_6502(2) AND NOT address_6502(1) AND 
+	NOT address_6502(11) AND NOT address_6502(9) AND NOT address_6502(8) AND 
+	NOT address_6502(3) AND NOT address_6502(6) AND NOT address_6502(5) AND 
+	NOT address_6502(10) AND NOT address_6502(7) AND NOT address_6502(4) AND 
+	NOT address_6502(15))));
+data_6502(5) <= data_6502_I(5) when data_6502_OE(5) = '1' else 'Z';
+data_6502_OE(5) <= (r_w_6502 AND aec);
+
+
+data_6502(6)_BUFR <= ((ddr_pio(1).EXP)
+	OR (address_6502(2) AND data_7501(6).PIN)
+	OR (address_6502(1) AND data_7501(6).PIN)
+	OR (address_6502(11) AND data_7501(6).PIN)
+	OR (address_6502(3) AND data_7501(6).PIN)
+	OR (address_6502(6) AND data_7501(6).PIN)
+	OR (address_6502(14) AND data_7501(6).PIN)
+	OR (address_6502(13) AND data_7501(6).PIN)
+	OR (address_6502(12) AND data_7501(6).PIN)
+	OR (address_6502(5) AND data_7501(6).PIN)
+	OR (address_6502(10) AND data_7501(6).PIN)
+	OR (address_6502(9) AND data_7501(6).PIN)
+	OR (address_6502(8) AND data_7501(6).PIN)
+	OR (address_6502(7) AND data_7501(6).PIN)
+	OR (address_6502(4) AND data_7501(6).PIN)
+	OR (address_6502(15) AND data_7501(6).PIN));
+
+
+data_6502_I(6) <= data_6502(6)_BUFR;
+data_6502(6) <= data_6502_I(6) when data_6502_OE(6) = '1' else 'Z';
+data_6502_OE(6) <= (r_w_6502 AND aec);
+
+
+data_6502_I(7) <= data_6502(7)_BUFR;
+data_6502(7) <= data_6502_I(7) when data_6502_OE(7) = '1' else 'Z';
+data_6502_OE(7) <= (r_w_6502 AND aec);
+
+
+data_6502(7)_BUFR <= (($OpTx$DEC_data_6502(7)_BUFR_MC$2)
+	OR (NOT r_w_6502 AND data_7501(7).PIN)
+	OR (address_6502(12) AND data_7501(7).PIN));
+
+
+data_7501_I(0) <= data_6502(0).PIN;
+data_7501(0) <= data_7501_I(0) when data_7501_OE(0) = '1' else 'Z';
+data_7501_OE(0) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(1) <= data_6502(1).PIN;
+data_7501(1) <= data_7501_I(1) when data_7501_OE(1) = '1' else 'Z';
+data_7501_OE(1) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(2) <= data_6502(2).PIN;
+data_7501(2) <= data_7501_I(2) when data_7501_OE(2) = '1' else 'Z';
+data_7501_OE(2) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(3) <= data_6502(3).PIN;
+data_7501(3) <= data_7501_I(3) when data_7501_OE(3) = '1' else 'Z';
+data_7501_OE(3) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(4) <= data_6502(4).PIN;
+data_7501(4) <= data_7501_I(4) when data_7501_OE(4) = '1' else 'Z';
+data_7501_OE(4) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(5) <= data_6502(5).PIN;
+data_7501(5) <= data_7501_I(5) when data_7501_OE(5) = '1' else 'Z';
+data_7501_OE(5) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(6) <= data_6502(6).PIN;
+data_7501(6) <= data_7501_I(6) when data_7501_OE(6) = '1' else 'Z';
+data_7501_OE(6) <= (NOT r_w_6502 AND aec);
+
+
+data_7501_I(7) <= data_6502(7).PIN;
+data_7501(7) <= data_7501_I(7) when data_7501_OE(7) = '1' else 'Z';
+data_7501_OE(7) <= (NOT r_w_6502 AND aec);
+
+FDCPE_ddr_pio0: FDCPE port map (ddr_pio(0),data_6502(0).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(0));
+ddr_pio_CE(0) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_ddr_pio1: FDCPE port map (ddr_pio(1),data_6502(1).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(1));
+ddr_pio_CE(1) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_ddr_pio2: FDCPE port map (ddr_pio(2),data_6502(2).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(2));
+ddr_pio_CE(2) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_ddr_pio3: FDCPE port map (ddr_pio(3),data_6502(3).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(3));
+ddr_pio_CE(3) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_ddr_pio4: FDCPE port map (ddr_pio(4),data_6502(4).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(4));
+ddr_pio_CE(4) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_ddr_pio5: FDCPE port map (ddr_pio(5),data_6502(6).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(5));
+ddr_pio_CE(5) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_ddr_pio6: FDCPE port map (ddr_pio(6),data_6502(7).PIN,NOT clock,NOT _reset,'0',ddr_pio_CE(6));
+ddr_pio_CE(6) <= (NOT r_w_6502 AND NOT address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+
+FDCPE_pio0: FDCPE port map (pio_I(0),data_6502(0).PIN,NOT clock,NOT _reset,'0',pio_CE(0));
+pio_CE(0) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(0) <= pio_I(0) when pio_OE(0) = '1' else 'Z';
+pio_OE(0) <= ddr_pio(0);
+
+FDCPE_pio1: FDCPE port map (pio_I(1),data_6502(1).PIN,NOT clock,NOT _reset,'0',pio_CE(1));
+pio_CE(1) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(1) <= pio_I(1) when pio_OE(1) = '1' else 'Z';
+pio_OE(1) <= ddr_pio(1);
+
+FDCPE_pio2: FDCPE port map (pio_I(2),data_6502(2).PIN,NOT clock,NOT _reset,'0',pio_CE(2));
+pio_CE(2) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(2) <= pio_I(2) when pio_OE(2) = '1' else 'Z';
+pio_OE(2) <= ddr_pio(2);
+
+FDCPE_pio3: FDCPE port map (pio_I(3),data_6502(3).PIN,NOT clock,NOT _reset,'0',pio_CE(3));
+pio_CE(3) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(3) <= pio_I(3) when pio_OE(3) = '1' else 'Z';
+pio_OE(3) <= ddr_pio(3);
+
+FDCPE_pio4: FDCPE port map (pio_I(4),data_6502(4).PIN,NOT clock,NOT _reset,'0',pio_CE(4));
+pio_CE(4) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(4) <= pio_I(4) when pio_OE(4) = '1' else 'Z';
+pio_OE(4) <= ddr_pio(4);
+
+FDCPE_pio5: FDCPE port map (pio_I(5),data_6502(6).PIN,NOT clock,NOT _reset,'0',pio_CE(5));
+pio_CE(5) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(5) <= pio_I(5) when pio_OE(5) = '1' else 'Z';
+pio_OE(5) <= ddr_pio(5);
+
+FDCPE_pio6: FDCPE port map (pio_I(6),data_6502(7).PIN,NOT clock,NOT _reset,'0',pio_CE(6));
+pio_CE(6) <= (NOT r_w_6502 AND address_6502(0) AND NOT address_6502(14) AND 
+	NOT address_6502(13) AND NOT address_6502(12) AND NOT address_6502(2) AND 
+	NOT address_6502(1) AND NOT address_6502(11) AND NOT address_6502(9) AND 
+	NOT address_6502(8) AND NOT address_6502(3) AND NOT address_6502(6) AND 
+	NOT address_6502(5) AND NOT address_6502(10) AND NOT address_6502(7) AND 
+	NOT address_6502(4) AND NOT address_6502(15));
+pio(6) <= pio_I(6) when pio_OE(6) = '1' else 'Z';
+pio_OE(6) <= ddr_pio(6);
+
+
+r_w_7501_I <= r_w_6502;
+r_w_7501 <= r_w_7501_I when r_w_7501_OE = '1' else 'Z';
+r_w_7501_OE <= NOT r_w_latched;
+
+FDCPE_r_w_latched: FDCPE port map (r_w_latched,NOT aec,gate_in,NOT _reset,'0');
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-10-TQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13               XC9572XL-10-TQ100              63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 data_7501<3>                     51 VCC                           
+  2 NC                               52 address_6502<8>               
+  3 data_7501<4>                     53 address_7501<11>              
+  4 r_w_6502                         54 address_6502<9>               
+  5 VCC                              55 address_7501<12>              
+  6 data_7501<5>                     56 address_6502<10>              
+  7 NC                               57 VCC                           
+  8 data_6502<0>                     58 address_7501<13>              
+  9 data_7501<6>                     59 address_6502<11>              
+ 10 data_6502<1>                     60 TIE                           
+ 11 data_7501<7>                     61 TIE                           
+ 12 data_6502<2>                     62 GND                           
+ 13 pio<0>                           63 TIE                           
+ 14 data_6502<3>                     64 TIE                           
+ 15 address_7501<5>                  65 TIE                           
+ 16 address_6502<2>                  66 TIE                           
+ 17 address_7501<4>                  67 TIE                           
+ 18 address_6502<1>                  68 TIE                           
+ 19 NC                               69 GND                           
+ 20 address_7501<3>                  70 TIE                           
+ 21 GND                              71 address_7501<14>              
+ 22 address_6502<0>                  72 address_6502<12>              
+ 23 address_7501<2>                  73 NC                            
+ 24 NC                               74 address_7501<15>              
+ 25 address_7501<1>                  75 GND                           
+ 26 VCC                              76 address_6502<13>              
+ 27 clock                            77 gate_in                       
+ 28 TIE                              78 address_6502<14>              
+ 29 TIE                              79 pio<6>                        
+ 30 aec                              80 NC                            
+ 31 GND                              81 address_6502<15>              
+ 32 address_7501<0>                  82 pio<5>                        
+ 33 address_6502<3>                  83 TDO                           
+ 34 NC                               84 GND                           
+ 35 address_7501<6>                  85 data_6502<7>                  
+ 36 address_6502<4>                  86 pio<4>                        
+ 37 address_7501<7>                  87 data_6502<6>                  
+ 38 VCC                              88 VCC                           
+ 39 address_6502<5>                  89 pio<3>                        
+ 40 address_7501<8>                  90 data_6502<5>                  
+ 41 address_6502<6>                  91 pio<2>                        
+ 42 address_7501<9>                  92 data_6502<4>                  
+ 43 NC                               93 pio<1>                        
+ 44 GND                              94 data_7501<2>                  
+ 45 TDI                              95 data_7501<1>                  
+ 46 NC                               96 data_7501<0>                  
+ 47 TMS                              97 r_w_7501                      
+ 48 TCK                              98 VCC                           
+ 49 address_6502<7>                  99 _reset                        
+ 50 address_7501<10>                100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-10-TQ100
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : FLOAT
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

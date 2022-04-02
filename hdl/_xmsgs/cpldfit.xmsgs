@@ -8,5 +8,35 @@
 <msg type="warning" file="Cpld" num="0" delta="new" >Unable to retrieve the path to the iSE Project Repository. Will use the default filename of &apos;<arg fmt="%s" index="1">Fake7501.ise</arg>&apos;.
 </msg>
 
+<msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">address_6502&lt;0&gt;</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P22</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
+</msg>
+
+<msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">clock</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P27</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="1239" delta="old" >The global <arg fmt="%s" index="1">clock</arg> designation (BUFG) on signal &apos;<arg fmt="%s" index="2">address_6502_0_IBUF</arg>&apos; is ignored. Most likely the signal is gated and therefore cannot be used as a global control signal.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">1</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;3&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">2</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;6&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">2</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;4&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">2</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;2&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">2</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;1&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">2</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;0&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">4</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">data_6502&lt;7&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
 </messages>
 

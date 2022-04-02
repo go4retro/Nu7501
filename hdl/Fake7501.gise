@@ -21,8 +21,126 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Fake7501.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Fake7501.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Fake7501.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="Fake7501.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="Fake7501.jed"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="Fake7501.lfp"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Fake7501.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="Fake7501.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="Fake7501.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Fake7501.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="Fake7501.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Fake7501.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="Fake7501.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="Fake7501.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Fake7501.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Fake7501.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Fake7501.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Fake7501.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Fake7501.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Fake7501.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="Fake7501.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Fake7501.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Fake7501.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Fake7501_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Fake7501_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="Fake7501_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Fake7501_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="Fake7501_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Fake7501_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Fake7501_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1635401209" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1635401209">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1635401209" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7180522910472808875" xil_pn:start_ts="1635401209">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1640095778" xil_pn:in_ck="3389918372849896" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-2007754344373409361" xil_pn:start_ts="1640095768">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <outfile xil_pn:name="Fake7501.lso"/>
+      <outfile xil_pn:name="Fake7501.ngc"/>
+      <outfile xil_pn:name="Fake7501.ngr"/>
+      <outfile xil_pn:name="Fake7501.prj"/>
+      <outfile xil_pn:name="Fake7501.stx"/>
+      <outfile xil_pn:name="Fake7501.syr"/>
+      <outfile xil_pn:name="Fake7501.xst"/>
+      <outfile xil_pn:name="Fake7501_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1640095779" xil_pn:in_ck="3691621108033539024" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4784892253643000582" xil_pn:start_ts="1640095778">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1640095786" xil_pn:in_ck="-6606125416727406246" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="3931465504876573792" xil_pn:start_ts="1640095779">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="Fake7501.bld"/>
+      <outfile xil_pn:name="Fake7501.ngd"/>
+      <outfile xil_pn:name="Fake7501_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1640095798" xil_pn:in_ck="3691621108033531531" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-61901709292780809" xil_pn:start_ts="1640095786">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="Fake7501.gyd"/>
+      <outfile xil_pn:name="Fake7501.mfd"/>
+      <outfile xil_pn:name="Fake7501.nga"/>
+      <outfile xil_pn:name="Fake7501.pad"/>
+      <outfile xil_pn:name="Fake7501.pnx"/>
+      <outfile xil_pn:name="Fake7501.rpt"/>
+      <outfile xil_pn:name="Fake7501.tim"/>
+      <outfile xil_pn:name="Fake7501.tspec"/>
+      <outfile xil_pn:name="Fake7501.vm6"/>
+      <outfile xil_pn:name="Fake7501.xml"/>
+      <outfile xil_pn:name="Fake7501_build.xml"/>
+      <outfile xil_pn:name="Fake7501_html"/>
+      <outfile xil_pn:name="Fake7501_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1640095801" xil_pn:in_ck="3691621108033540395" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1640095798">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="Fake7501.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1640095801" xil_pn:in_ck="3691621108033527109" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="-3598488201878296819" xil_pn:start_ts="1640095801">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1635401243" xil_pn:in_ck="3691621108033540395" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1635401241">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1640096058" xil_pn:in_ck="-4938235901774421285" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1640096058">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+  </transforms>
 
 </generated_project>
